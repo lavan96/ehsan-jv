@@ -162,7 +162,7 @@
     
     /* Section Styles */
     section {
-      padding: 80px 0;
+      padding: 40px 0;
     }
     .container > section {
       padding-left: 15px;
@@ -177,17 +177,24 @@
       border: none;
       box-shadow: 0 4px 20px rgba(0,0,0,0.05);
       transition: transform 0.3s, box-shadow 0.3s;
+      color: #fff; /* Ensure all card text is white */
     }
     .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 6px 30px rgba(0,0,0,0.1);
     }
     .card-title {
-      color: #0C1E38;
+      color: #fff;
       font-family: 'Ubuntu', sans-serif;
+      font-weight: 600;
+    }
+    .card-body,
+    .card-text,
+    .card li {
+      color: #fff;
     }
     
-    /* Checklist using FontAwesome circle-check icon */
+    /* Custom Checklist using FontAwesome circle-check icon */
     ul.checklist {
       list-style: none;
       padding-left: 0;
@@ -196,7 +203,7 @@
       position: relative;
       padding-left: 25px;
       margin-bottom: 10px;
-      color: #0C1E38;
+      color: #fff; /* Ensure checklist text is white */
     }
     ul.checklist li::before {
       content: "\f058";
@@ -205,7 +212,7 @@
       position: absolute;
       left: 0;
       top: 0;
-      color: #0C1E38;
+      color: #fff;
     }
     
     /* Footer */
@@ -234,6 +241,22 @@
         font-weight: 500;
       }
 
+      .btn-education{
+        border-radius: 8px;
+      padding: 10px 20px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+        color: #fff;
+        background-color: transparent;
+        border-color: #fff;
+      }
+
+      .btn-education:hover{
+        color: #6a81e7;
+        background-color: #fff;
+        border-color: #fff;
+      }
+
     @media screen and (max-width: 768px) {
 
       p.lead{
@@ -241,7 +264,7 @@
       }
 
       header.hero-section{
-        min-height: 190vh;
+        min-height: 170vh;
       }
 
       ul.navbar-nav{
@@ -292,10 +315,10 @@ header.hero-section{
   <header class="hero-section">
     <div id="particles-js"></div>
     <div class="hero-content" style="text-align: left;">
-      <h1 style="margin-bottom: 1em; text-align: left;">Transforming Organizations<br>with Innovative Solutions</h1>
+      <h1 style="margin-bottom: 1em; text-align: left; color: #D9A03F;">Transforming Organizations<br>with Innovative Solutions</h1>
       <p class="lead" style="text-align: left;">Ehsan Jaya Ventures is a trusted provider of cutting-edge management systems and training consultancy solutions, serving both private enterprises and government institutions. As an authorized reseller of management systems specifically designed for the education and healthcare sectors, we help organizations streamline their operations and enhance efficiency.</p>
       <p class="lead" style="text-align: left;">In addition, we specialize in training consultancy programmes, which form a core part of our business. Our training solutions are designed to enhance workforce performance, improve management capabilities, and drive organizational success. We offer a wide range of training programs tailored to the unique needs of our clients.</p>
-      <a href="#about" class="btn btn-custom mt-3">Learn More</a>
+      <!-- <a href="#about" class="btn btn-custom mt-3">Learn More</a> -->
     </div>
     <div class="scroll-down">
       <i class="fa-solid fa-chevron-down"></i>
@@ -304,48 +327,22 @@ header.hero-section{
   
   <!-- Main Content -->
   <main class="container my-5">
-    <!-- Welcome Section -->
-    <section id="welcome">
-      <div class="row">
-        <div class="col text-center">
-          <h2>Welcome to Ehsan Jaya Ventures</h2>
-          <p>
-            At Ehsan Jaya Ventures, innovation and excellence drive everything we do. As a trusted partner in technology solutions and corporate training, we empower organizations to streamline operations and unlock their full potential.
-          </p>
-          <a href="#services" class="btn btn-custom mt-3">Our Services</a>
-        </div>
-      </div>
-    </section>
-    
-    <!-- About Us Section -->
-    <section id="about" class="bg-light">
-      <div class="row">
-        <div class="col">
-          <h2>About Us</h2>
-          <p>
-            We are a leading provider of cutting‐edge management systems and tailored training solutions. Our mission is to help organizations optimize performance through advanced digital platforms and professional development programs. Proudly an authorized reseller for the education and healthcare sectors, our expert training programs equip your team with the skills needed to excel.
-          </p>
-          <a href="#contact" class="btn btn-custom mt-3">Contact Us</a>
-        </div>
-      </div>
-    </section>
     
     <!-- Our Services Section -->
-    <section id="services">
+    <section id="services" style="color: #fff;">
       <div class="row">
         <div class="col text-center mb-4">
-          <h2>Our Services</h2>
+          <h2 style="font-weight: 700; font-size: 3em; color: #0C1E38;">Our Services</h2>
         </div>
       </div>
       <div class="row g-4">
         <!-- Service 1 -->
         <div class="col-md-6">
-          <div class="card h-100">
-            <div class="card-body">
-              <h3 class="card-title">
-                <i class="fa-solid fa-gears me-1"></i>Management Systems Reselling
-              </h3>
-              <h4>Education Management Systems – eCOLE Learning Exchange 11.0</h4>
+          <div class="card h-100" style="color: #fff; background-color: #6a81e7;">
+            <img src="education-thumbnail.jpg" alt="" style="background-size: cover; max-width: 100%;">
+            <div class="card-body" style="padding-left: 1em;">
+              
+              <h4 class="card-title" style="font-size: 2em; padding-bottom: 0.5em;">Education Management System</h4>
               <p class="card-text">
                 Developed by Innove Technologies, eCOLE Learning Exchange (eLX) 11.0 is a comprehensive LMS built for modern education and training.
               </p>
@@ -355,7 +352,7 @@ header.hero-section{
                 <li>Automated Testing &amp; Reporting</li>
                 <li>Mobile Integration</li>
               </ul>
-              <a href="http://www.ecoleinfo.com" target="_blank" class="btn btn-custom mt-2">Learn More</a>
+              <a href="http://www.ecoleinfo.com" target="_blank" class="btn btn-education mt-2" id="education">Learn More</a>
             </div>
           </div>
         </div>
@@ -363,8 +360,9 @@ header.hero-section{
         <div class="col-md-6">
           <div class="card h-100">
             <div class="card-body">
+              <i class="fa-solid fa-stethoscope me-1"></i>
               <h4 class="card-title">
-                <i class="fa-solid fa-stethoscope me-1"></i>Healthcare Management Systems – Saaga Healthcare
+                Healthcare Management Systems
               </h4>
               <p class="card-text">
                 Saaga Healthcare is a robust hospital management system designed to streamline operations by integrating patient management, pharmacy, laboratory, billing, HR, and more.
@@ -379,9 +377,6 @@ header.hero-section{
             </div>
           </div>
         </div>
-      </div>
-      <div class="text-center mt-4">
-        <a href="#training" class="btn btn-custom">View All Services</a>
       </div>
     </section>
     
@@ -408,22 +403,7 @@ header.hero-section{
       </div>
     </section>
     
-    <!-- Why Choose Us Section -->
-    <section id="why">
-      <div class="row">
-        <div class="col">
-          <h2>Why Choose Us?</h2>
-          <ul class="checklist">
-            <li>Comprehensive Solutions for digital management and training</li>
-            <li>Industry Expertise with seasoned professionals</li>
-            <li>Client-Centric Approach with tailored solutions</li>
-            <li>Proven Impact in enhancing operational efficiency</li>
-            <li>Innovative &amp; Flexible offerings to suit your evolving needs</li>
-          </ul>
-          <a href="#contact" class="btn btn-custom mt-3">Learn More</a>
-        </div>
-      </div>
-    </section>
+    
     
     <!-- Contact Us Section -->
     <section id="contact" class="bg-light">
