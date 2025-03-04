@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ehsan Jaya Ventures - Home</title>
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+  <!-- Font Awesome CSS (CDN) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-<YOUR_INTEGRITY_HASH_HERE>"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: rgba(12,30,56,0.9);
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    /* Headers using Ubuntu */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Ubuntu', sans-serif;
+    }
+    
+    /* Navbar */
+    .navbar {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      padding: 0.8rem 0;
+    }
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: 700;
+    }
+    .navbar-brand img {
+      height: 40px;
+      width: auto;
+    }
+    .navbar-light .navbar-nav .nav-link {
+      color: rgba(12,30,56,0.9) !important;
+      margin: 0 0.75rem;
+      transition: color 0.3s;
+    }
+    .navbar-light .navbar-nav .nav-link:hover {
+      color: #007bff !important;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      background: url("hero.jpg") no-repeat center center;
+      background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    /* Static Gradient Overlay */
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, rgba(12,30,56,0.7), rgba(12,30,56,0.3));
+      z-index: 1;
+    }
+    /* Particle Layer */
+    #particles-js {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+    }
+    /* Hero Text */
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 90%;
+      animation: fadeInUp 1s ease-out;
+      color: #fff;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .hero-content p {
+      font-size: 1.25rem;
+    }
+    /* Scroll Down Indicator */
+    .scroll-down {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      color: #fff;
+      z-index: 3;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(-10px); }
+    }
+    
+    /* Button Styling */
+    .btn-custom {
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      /* Default: navy blue background with gold gradient text */
+      background-color: #0C1E38;
+      
+      color: #D9A03F;
+      
+      
+      border-color: #D9A03F;
+    }
+    .btn-custom:hover,
+    .btn-custom:focus,
+    .btn-custom:active {
+      /* On hover: gold gradient background with solid navy text */
+      background: linear-gradient(45deg, #D9A03F, #EBC76B);
+      color: #0C1E38;
+      -webkit-background-clip: initial;
+      background-clip: initial;
+    }
+    
+    /* Section Styles */
+    section {
+      padding: 80px 0;
+    }
+    .container > section {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .bg-light {
+      background-color: #f8f9fa !important;
+    }
+    
+    /* Cards */
+    .card {
+      border: none;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 30px rgba(0,0,0,0.1);
+    }
+    .card-title {
+      color: #0C1E38;
+      font-family: 'Ubuntu', sans-serif;
+    }
+    
+    /* Checklist using FontAwesome circle-check icon */
+    ul.checklist {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul.checklist li {
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: 10px;
+      color: #0C1E38;
+    }
+    ul.checklist li::before {
+      content: "\f058";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #0C1E38;
+    }
+    
+    /* Footer */
+    footer {
+      background: #0C1E38;
+      color: #fff;
+      padding: 20px 0;
+    }
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    .navbar-toggler {
+    background-color: #0C1E38;
+    border-color: #D9A03F;
+  }
+  .navbar-toggler-icon i {
+    color: #D9A03F;
+    font-size: 1em;
+    padding-top:0.25em;
+  }
+
+  ul.navbar-nav{
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+
+    @media screen and (max-width: 768px) {
+
+      p.lead{
+        font-size: 1em;
+      }
+
+      header.hero-section{
+        min-height: 140vh;
+      }
+
+      ul.navbar-nav{
+        text-align: right;
+        padding-top: 1em;
+      }
+    }
+
+    @media screen and (min-width: 769px) {
+
+p.lead{
+  font-size: 1.1em;
+}
+
+header.hero-section{
+        min-height: 100vh;
+      }
+}
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="EHSAN JAYA VENTURES - new.png" alt="Ehsan Jaya Ventures Logo">
+        
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+          <i class="fa-solid fa-bars"></i>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#training">Training</a></li>
+          <li class="nav-item"><a class="nav-link" href="#why">Why Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <div id="particles-js"></div>
+    <div class="hero-content" style="text-align: left;">
+      <h1 style="margin-bottom: 1em; text-align: left;">Empowering Organizations<br>with Innovative Solutions</h1>
+      <p class="lead" style="text-align: left;">Ehsan Jaya Ventures is a trusted provider of cutting-edge management systems and corporate training solutions, serving both private enterprises and government institutions. As an authorized reseller of management systems specifically designed for the education and healthcare sectors, we help organizations streamline their operations and enhance efficiency.</p>
+      <p class="lead" style="text-align: left;">In addition, we specialize in training consultancy programmes, which form a core part of our business. Our training solutions are designed to enhance workforce performance, improve management capabilities, and drive organizational success. We offer a wide range of training programs tailored to the unique needs of our clients.</p>
+      <a href="#about" class="btn btn-custom mt-3">Learn More</a>
+    </div>
+    <div class="scroll-down">
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+  </header>
+  
+  <!-- Main Content -->
+  <main class="container my-5">
+    <!-- Welcome Section -->
+    <section id="welcome">
+      <div class="row">
+        <div class="col text-center">
+          <h2>Welcome to Ehsan Jaya Ventures</h2>
+          <p>
+            At Ehsan Jaya Ventures, innovation and excellence drive everything we do. As a trusted partner in technology solutions and corporate training, we empower organizations to streamline operations and unlock their full potential.
+          </p>
+          <a href="#services" class="btn btn-custom mt-3">Our Services</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- About Us Section -->
+    <section id="about" class="bg-light">
+      <div class="row">
+        <div class="col">
+          <h2>About Us</h2>
+          <p>
+            We are a leading provider of cutting‐edge management systems and tailored training solutions. Our mission is to help organizations optimize performance through advanced digital platforms and professional development programs. Proudly an authorized reseller for the education and healthcare sectors, our expert training programs equip your team with the skills needed to excel.
+          </p>
+          <a href="#contact" class="btn btn-custom mt-3">Contact Us</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Our Services Section -->
+    <section id="services">
+      <div class="row">
+        <div class="col text-center mb-4">
+          <h2>Our Services</h2>
+        </div>
+      </div>
+      <div class="row g-4">
+        <!-- Service 1 -->
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title">
+                <i class="fa-solid fa-gears me-1"></i>Management Systems Reselling
+              </h3>
+              <h4>Education Management Systems – eCOLE Learning Exchange 11.0</h4>
+              <p class="card-text">
+                Developed by Innove Technologies, eCOLE Learning Exchange (eLX) 11.0 is a comprehensive LMS built for modern education and training.
+              </p>
+              <ul class="checklist">
+                <li>Course &amp; Content Management</li>
+                <li>Personalized Learning</li>
+                <li>Automated Testing &amp; Reporting</li>
+                <li>Mobile Integration</li>
+              </ul>
+              <a href="http://www.ecoleinfo.com" target="_blank" class="btn btn-custom mt-2">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Service 2 -->
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title">
+                <i class="fa-solid fa-stethoscope me-1"></i>Healthcare Management Systems – Saaga Healthcare
+              </h4>
+              <p class="card-text">
+                Saaga Healthcare is a robust hospital management system designed to streamline operations by integrating patient management, pharmacy, laboratory, billing, HR, and more.
+              </p>
+              <ul class="checklist">
+                <li>Patient Management</li>
+                <li>Pharmacy &amp; Laboratory Integration</li>
+                <li>Infrastructure &amp; Billing</li>
+                <li>HR Management</li>
+              </ul>
+              <a href="http://www.saagahc.com" target="_blank" class="btn btn-custom mt-2">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="#training" class="btn btn-custom">View All Services</a>
+      </div>
+    </section>
+    
+    <!-- Training Section -->
+    <section id="training" class="bg-light">
+      <div class="row">
+        <div class="col">
+          <h2>
+            <i class="fa-solid fa-chalkboard-user me-1"></i>Corporate Training
+          </h2>
+          <p>
+            Our training programs are designed to bridge the skills gap and drive sustainable growth. We offer tailored courses including:
+          </p>
+          <ul class="checklist">
+            <li>Corporate Training – Enhancing business acumen and productivity</li>
+            <li>Management Training – Leadership development and operational excellence</li>
+            <li>IT Services Training – Digital skills and cybersecurity expertise</li>
+            <li>Teambuilding Programs – Interactive workshops for collaboration</li>
+            <li>Soft Skills Training – Communication, conflict resolution, and emotional intelligence</li>
+            <li>Competency Training for Management Systems – Deep expertise in eCOLE &amp; Saaga</li>
+          </ul>
+          <a href="#contact" class="btn btn-custom mt-3">View Training Programs</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Why Choose Us Section -->
+    <section id="why">
+      <div class="row">
+        <div class="col">
+          <h2>Why Choose Us?</h2>
+          <ul class="checklist">
+            <li>Comprehensive Solutions for digital management and training</li>
+            <li>Industry Expertise with seasoned professionals</li>
+            <li>Client-Centric Approach with tailored solutions</li>
+            <li>Proven Impact in enhancing operational efficiency</li>
+            <li>Innovative &amp; Flexible offerings to suit your evolving needs</li>
+          </ul>
+          <a href="#contact" class="btn btn-custom mt-3">Learn More</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Contact Us Section -->
+    <section id="contact" class="bg-light">
+      <div class="row">
+        <div class="col">
+          <h2>Contact Us</h2>
+          <p>Ready to transform your organization? Get in touch with us today:</p>
+          <p>
+            <i class="fa-solid fa-location-dot me-1"></i>
+            <strong>Address:</strong> [Insert Address]
+          </p>
+          <p>
+            <i class="fa-solid fa-phone me-1"></i>
+            <strong>Phone:</strong> [Insert Contact Number]
+          </p>
+          <p>
+            <i class="fa-solid fa-envelope me-1"></i>
+            <strong>Email:</strong>
+            <a href="mailto:[Insert Email Address]">[Insert Email Address]</a>
+          </p>
+          <p>
+            <i class="fa-solid fa-globe me-1"></i>
+            <strong>Website:</strong>
+            <a href="[Insert Website URL]">[Insert Website URL]</a>
+          </p>
+          <a href="#contact" class="btn btn-custom mt-3">Get In Touch</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2024 Ehsan Jaya Ventures. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- Particles.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    /* Initialize particles.js with a sample configuration */
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 200,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 6
+          }
+        },
+        "opacity": {
+          "value": 2,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 400,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
