@@ -6,7 +6,7 @@
   <title>Ehsan Jaya Ventures - Home</title>
   <!-- Google Fonts -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&family=Roboto:wght@400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@400;500&display=swap"
     rel="stylesheet"
   >
   <!-- Bootstrap CSS -->
@@ -25,7 +25,7 @@
   <style>
     /* Global Styles */
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       color: rgba(12,30,56,0.9);
       margin: 0;
       padding: 0;
@@ -36,11 +36,16 @@
       color: inherit;
     }
     
-    /* Headers using Ubuntu */
+    /* Headers using Inter */
     h1, h2, h3, h4, h5, h6 {
-      font-family: 'Ubuntu', sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
     
+    h1 {
+  background: linear-gradient(45deg, #D9A03F, #EBC76B, #D9A03F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
     /* Navbar */
     .navbar {
       background-color: #fff;
@@ -51,7 +56,7 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      font-family: 'Ubuntu', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-weight: 700;
     }
     .navbar-brand img {
@@ -142,18 +147,13 @@
       padding: 10px 20px;
       font-weight: 700;
       transition: all 0.3s ease;
-      /* Default: navy blue background with gold gradient text */
       background-color: #0C1E38;
-      
       color: #D9A03F;
-      
-      
       border-color: #D9A03F;
     }
     .btn-custom:hover,
     .btn-custom:focus,
     .btn-custom:active {
-      /* On hover: gold gradient background with solid navy text */
       background: linear-gradient(45deg, #D9A03F, #EBC76B);
       color: #0C1E38;
       -webkit-background-clip: initial;
@@ -177,7 +177,7 @@
       border: none;
       box-shadow: 0 4px 20px rgba(0,0,0,0.05);
       transition: transform 0.3s, box-shadow 0.3s;
-      color: #fff; /* Ensure all card text is white */
+      color: #fff;
     }
     .card:hover {
       transform: translateY(-5px);
@@ -185,7 +185,7 @@
     }
     .card-title {
       color: #fff;
-      font-family: 'Ubuntu', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-weight: 600;
     }
     .card-body,
@@ -203,7 +203,7 @@
       position: relative;
       padding-left: 25px;
       margin-bottom: 10px;
-      color: #fff; /* Ensure checklist text is white */
+      color: #fff;
     }
     ul.checklist li::before {
       content: "\f058";
@@ -227,88 +227,77 @@
     }
 
     .navbar-toggler {
-    background-color: #0C1E38;
-    border-color: #D9A03F;
-  }
-  .navbar-toggler-icon i {
-    color: #D9A03F;
-    font-size: 1em;
-    padding-top:0.25em;
-  }
+      background-color: #0C1E38;
+      border-color: #D9A03F;
+    }
+    .navbar-toggler-icon i {
+      color: #D9A03F;
+      font-size: 1em;
+      padding-top: 0.25em;
+    }
 
-  ul.navbar-nav{
-        text-transform: uppercase;
-        font-weight: 500;
-      }
+    ul.navbar-nav {
+      text-transform: uppercase;
+      font-weight: 500;
+    }
 
-      .btn-education{
-        border-radius: 8px;
+    .btn-education {
+      border-radius: 8px;
       padding: 10px 20px;
       font-weight: 700;
       transition: all 0.3s ease;
-        color: #fff;
-        background-color: transparent;
-        border-color: #fff;
-      }
+      color: #fff;
+      background-color: transparent;
+      border-color: #fff;
+    }
+    .btn-education:hover {
+      color: #6a81e7;
+      background-color: #fff;
+      border-color: #fff;
+    }
 
-      .btn-education:hover{
-        color: #6a81e7;
-        background-color: #fff;
-        border-color: #fff;
-      }
-
-      .btn-healthcare{
-        border-radius: 8px;
+    .btn-healthcare {
+      border-radius: 8px;
       padding: 10px 20px;
       font-weight: 700;
       transition: all 0.3s ease;
-        color: #fff;
-        background-color: transparent;
-        border-color: #fff;
-      }
-
-      .btn-healthcare:hover{
-        color: #4ab2b0;
-        background-color: #fff;
-        border-color: #fff;
-      }
-
-      
+      color: #fff;
+      background-color: transparent;
+      border-color: #fff;
+    }
+    .btn-healthcare:hover {
+      color: #4ab2b0;
+      background-color: #fff;
+      border-color: #fff;
+    }
 
     @media screen and (max-width: 768px) {
-
-      p.lead{
+      p.lead {
         font-size: 1em;
       }
-
-      header.hero-section{
+      header.hero-section {
         min-height: 170dvh;
       }
-
-      ul.navbar-nav{
+      ul.navbar-nav {
         text-align: right;
         padding-top: 1em;
       }
-
-      .card.bg-dark{
+      .card.bg-dark {
         margin: 0.5em;
       }
     }
 
     @media screen and (min-width: 769px) {
-
-p.lead{
-  font-size: 1.1em;
-}
-
-header.hero-section{
+      p.lead {
+        font-size: 1.1em;
+      }
+      header.hero-section {
         min-height: 100vh;
       }
-
-      .row.num-2{
+      .row.num-2 {
         margin-top: 1em;
       }
-}
+    }
   </style>
 </head>
 <body>
@@ -317,7 +306,6 @@ header.hero-section{
     <div class="container">
       <a class="navbar-brand" href="#">
         <img src="EHSAN JAYA VENTURES - new.png" alt="Ehsan Jaya Ventures Logo">
-        
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
               aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -342,9 +330,9 @@ header.hero-section{
     <div id="particles-js"></div>
     <div class="hero-content" style="text-align: left;">
       <h1 style="margin-bottom: 1em; text-align: left; color: #D9A03F;">Transforming Organizations<br>with Innovative Solutions</h1>
-      <p class="lead" style="text-align: left;">Ehsan Jaya Ventures is a trusted provider of cutting-edge management systems and training consultancy solutions, serving both private enterprises and government institutions. As an authorized reseller of management systems specifically designed for the education and healthcare sectors, we help organizations streamline their operations and enhance efficiency.</p>
-      <p class="lead" style="text-align: left;">In addition, we specialize in training consultancy programmes, which form a core part of our business. Our training solutions are designed to enhance workforce performance, improve management capabilities, and drive organizational success. We offer a wide range of training programs tailored to the unique needs of our clients.</p>
-      <!-- <a href="#about" class="btn btn-custom mt-3">Learn More</a> -->
+      <p class="lead" style="text-align: left;">Ehsan Jaya Ventures is a trusted provider of cutting-edge management systems and training consultancy solutions, serving both private enterprises and government institutions.</p>
+        <p class="lead" style="text-align: left;">As an authorized reseller of management systems specifically designed for the education and healthcare sectors, we help organizations streamline their operations and enhance efficiency.</p>
+      <p class="lead" style="text-align: left;">In addition, we specialize in training consultancy programmes, which form a core part of our business. Our training solutions are designed to enhance workforce performance, improve management capabilities, and drive organizational success.</p>
     </div>
     <div class="scroll-down">
       <i class="fa-solid fa-chevron-down"></i>
@@ -353,7 +341,6 @@ header.hero-section{
   
   <!-- Main Content -->
   <main class="container my-5">
-    
     <!-- Our Services Section -->
     <section id="services" style="color: #fff;">
       <div class="row">
@@ -367,7 +354,6 @@ header.hero-section{
           <div class="card h-100 glass-card" style="color: #fff; background: linear-gradient(45deg, #748ae0, #3c57c4);">
             <img src="education-thumbnail.jpg" alt="" style="background-size: cover; max-width: 100%;">
             <div class="card-body" style="padding-left: 1em;">
-              
               <h4 class="card-title" style="font-size: 2em; padding-bottom: 0.5em;">Education Management System</h4>
               <p class="card-text">
                 Developed by Innove Technologies, eCOLE Learning Exchange (eLX) 11.0 is a comprehensive LMS built for modern education and training.
@@ -387,7 +373,6 @@ header.hero-section{
           <div class="card h-100" style="color: #fff; background: linear-gradient(45deg, #5fbfbc, #0c8c87);">
             <img src="healthcarethumbnail.jpg" alt="" style="background-size: cover; max-width: 100%;">
             <div class="card-body" style="padding-left: 1em;">
-              
               <h4 class="card-title" style="font-size: 2em; padding-bottom: 0.5em;">
                 Healthcare Management System
               </h4>
@@ -412,57 +397,55 @@ header.hero-section{
       <div class="row">
         <div class="col">
           <h2 style="font-weight: 700; font-size: 3em; color: #0C1E38;">
-            Training Programmes
+            Training Consultancy
           </h2>
-        
           <div class="row" style="margin-top: 3em;">
             <div class="col-md-4">
-          <div class="card bg-dark text-white">
-            <img src="management.png" class="card-img" alt="...">
-            <div class="card-img-overlay">
-              <h5 class="card-title"></h5>
+              <div class="card bg-dark text-white">
+                <img src="management.png" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                  <h5 class="card-title"></h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card bg-dark text-white">
+                <img src="digital.png" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                  <h5 class="card-title"></h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card bg-dark text-white">
+                <img src="leadership.png" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                  <h5 class="card-title"></h5>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card bg-dark text-white">
-            <img src="digital.png" class="card-img" alt="...">
-            <div class="card-img-overlay">
-              <h5 class="card-title"></h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card bg-dark text-white">
-            <img src="leadership.png" class="card-img" alt="...">
-            <div class="card-img-overlay">
-              <h5 class="card-title"></h5>
-            </div>
-          </div>
-        </div>
-      </div>
           <div class="row num-2">
             <div class="col-md-4">
-          <div class="card bg-dark text-white">
-            <img src="team-building.png" class="card-img" alt="...">
-            <div class="card-img-overlay">
-              <h5 class="card-title"></h5>
+              <div class="card bg-dark text-white">
+                <img src="team-building.png" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                  <h5 class="card-title"></h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card bg-dark text-white">
+                <img src="competency.png" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                  <h5 class="card-title"></h5>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card bg-dark text-white">
-            <img src="competency.png" class="card-img" alt="...">
-            <div class="card-img-overlay">
-              <h5 class="card-title"></h5>
-            </div>
-          </div>
-        </div>
-        
       </div>
     </section>
-    
-    
     
     <!-- Contact Us Section -->
     <section id="contact" class="bg-light">
