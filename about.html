@@ -144,24 +144,23 @@
       transition: transform 0.3s, box-shadow 0.3s;
       
       text-align: center;
-      background-color: #0C1E38;
-      color: linear-gradient(45deg, #D9A03F,#ffe093, #EBC76B, #D9A03F, #ffe093, #D9A03F);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+      background: transparent; /*linear-gradient(45deg, #D9A03F,#ffe093, #EBC76B, #D9A03F, #ffe093, #D9A03F);*/
+      color: #0C1E38;
+ 
     }
     .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 6px 30px rgba(0,0,0,0.1);
     }
     h3.card-title {
-      color: #D9A03F;
+      color: #0C1E38;
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
     }
     .card-body,
     .card-text,
     .card li {
-      color: #D9A03F;
+      color: #0C1E38;
     }
 
     @media screen and (max-width: 768px){
@@ -172,12 +171,12 @@
       }
 
       h3.card-title {
-      text-align: left;
+      text-align: center;
     }
     .card-body,
     .card-text,
     .card li {
-        text-align: left;
+        text-align: center;
     }
     }
 
