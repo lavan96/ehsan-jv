@@ -144,7 +144,7 @@
       transition: transform 0.3s, box-shadow 0.3s;
       
       text-align: center;
-      background: #cbb97aba; /*linear-gradient(45deg, #D9A03F,#ffe093, #EBC76B, #D9A03F, #ffe093, #D9A03F);*/
+      background: #cbb97a99; /*linear-gradient(45deg, #D9A03F,#ffe093, #EBC76B, #D9A03F, #ffe093, #D9A03F);*/
       color: #0C1E38;
  
     }
@@ -192,6 +192,25 @@
         margin-top: 1em;
         margin-bottom: -2em;
     }
+
+    .web {
+        display: none;
+    }
+
+    .mobile{
+        display: block;
+    }
+    }
+
+    @media screen and (min-width: 769px){
+
+        .web {
+        display: block;
+    }
+
+    .mobile{
+        display: none;
+    }   
     }
 
   </style>
@@ -284,8 +303,11 @@
                 <img src="expertise-icon.png" alt="" class="custom-icon">
                 <div class="card-body">
                   <h3 style="font-size: 1.5em;" class="card-title">Expertise &amp; Experience</h3>
-                  <p>
+                  <p class="web">
                     Backed by a team of seasoned professionals, we bring real-world insights and<br>proven strategies to every engagement.
+                  </p>
+                  <p class="mobile">
+                    Backed by a team of seasoned professionals, we bring real-world insights and proven strategies to every engagement.
                   </p>
                 </div>
               </div>
