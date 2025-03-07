@@ -63,9 +63,7 @@
       margin: 0 0.75rem;
       transition: color 0.3s;
     }
-    .navbar-light .navbar-nav .nav-link:hover {
-      color: #007bff !important;
-    }
+    
     /* Custom Navbar Toggler Styles */
     .navbar-toggler {
       background-color: #0C1E38;
@@ -132,6 +130,46 @@
       pointer-events: none;
     }
 
+    .navbar-light .navbar-nav .nav-link:hover {
+      font-weight: 900;
+    }
+
+    /* Cards */
+    .card {
+      border-color: #D9A03F;
+      border-width: 2px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+      
+      text-align: center;
+      background-color: #0C1E38;
+      color: linear-gradient(45deg, #D9A03F,#ffe093, #EBC76B, #D9A03F, #ffe093, #D9A03F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 30px rgba(0,0,0,0.1);
+    }
+    h3.card-title {
+      color: #D9A03F;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+    .card-body,
+    .card-text,
+    .card li {
+      color: #D9A03F;
+    }
+
+    @media screen and (max-width: 768px){
+
+        ul.navbar-nav {
+        text-align: right;
+        padding-top: 1em;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -159,7 +197,7 @@
   </nav>
   <div id="particles-js"></div>
   <!-- About Content -->
-  <div class="container">
+  <div class="container" style="padding: 2em;">
     
     <!-- About Ehsan Jaya Ventures -->
     <section id="about-intro">
@@ -200,22 +238,52 @@
     <section id="why-different">
       <h2 class="section-title">Why We’re Different</h2>
       <div class="section-content">
-        <h3>Holistic Approach</h3>
-        <p>
-          We seamlessly integrate technology solutions with training services, ensuring that every tool or platform is supported by the right skill set for maximum impact.
-        </p>
-        <h3>Customization</h3>
-        <p>
-          We recognize that each organization is unique. Our solutions and training modules are tailored to address specific goals, challenges, and cultural nuances.
-        </p>
-        <h3>Expertise &amp; Experience</h3>
-        <p>
-          Backed by a team of seasoned professionals, we bring real-world insights and proven strategies to every engagement.
-        </p>
-        <h3>Long-Term Partnerships</h3>
-        <p>
-          Beyond implementation and training, we remain committed to our clients’ ongoing success, offering continued support, updates, and enhancements.
-        </p>
+        <div class="row g-4">
+            <!-- Card 1: Holistic Approach -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h3 style="font-size: 1.5em;" class="card-title">Holistic Approach</h3>
+                  <p>
+                    We seamlessly integrate technology solutions with training services, ensuring that every tool or platform is supported by the right skill set for maximum impact.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2: Customization -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h3 style="font-size: 1.5em;" class="card-title">Customization</h3>
+                  <p>
+                    We recognize that each organization is unique. Our solutions and training modules are tailored to address specific goals, challenges, and cultural nuances.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3: Expertise & Experience -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h3 style="font-size: 1.5em;" class="card-title">Expertise &amp; Experience</h3>
+                  <p>
+                    Backed by a team of seasoned professionals, we bring real-world insights and proven strategies to every engagement.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 4: Long-Term Partnerships -->
+            <div class="col-md-3 col-sm-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h3 style="font-size: 1.5em;" class="card-title">Long-Term Partnerships</h3>
+                  <p>
+                    Beyond implementation and training, we remain committed to our clients’ ongoing success, offering continued support, updates, and enhancements.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
     </section>
     
