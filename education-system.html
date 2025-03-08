@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About - Ehsan Jaya Ventures</title>
+  <title>eCOLE Learning Exchange 11.0 - Empowering Modern Education</title>
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@400;500&display=swap"
@@ -40,6 +40,7 @@
     /* Headers using Poppins */
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Poppins', sans-serif;
+      font-weight: 700;
     }
     
     /* Navbar (consistent with homepage) */
@@ -144,23 +145,24 @@
       transition: transform 0.3s, box-shadow 0.3s;
       
       text-align: center;
-      background: #cbb97a99; /*linear-gradient(45deg, #D9A03F,#ffe093, #EBC76B, #D9A03F, #ffe093, #D9A03F);*/
-      color: #0C1E38;
- 
+      background-color: #0C1E38;
+      color: linear-gradient(45deg, #D9A03F,#ffe093, #EBC76B, #D9A03F, #ffe093, #D9A03F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
     }
     .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 6px 30px rgba(0,0,0,0.1);
     }
     h3.card-title {
-      color: #0C1E38;
+      color: #D9A03F;
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
     }
     .card-body,
     .card-text,
     .card li {
-      color: #0C1E38;
+      color: #D9A03F;
     }
 
     .custom-icon{
@@ -168,6 +170,66 @@
         align-self: center;
         margin-top: 1em;
         margin-bottom: -2em;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      background: url("education-thumbnail-2.jpg") no-repeat center center;
+      background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    /* Static Gradient Overlay */
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, rgba(12,30,56,0.9), rgba(12,30,56,0.85));
+      z-index: 1;
+    }
+    
+    /* Hero Text */
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 90%;
+      animation: fadeInUp 1s ease-out;
+      color: #fff;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .hero-content p {
+      font-size: 1.25rem;
+    }
+    /* Scroll Down Indicator */
+    .scroll-down {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      color: #fff;
+      z-index: 3;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(-10px); }
     }
 
     /* Dropdown menu styling */
@@ -198,19 +260,12 @@
       }
 
       h3.card-title {
-      text-align: center;
+      text-align: left;
     }
     .card-body,
     .card-text,
     .card li {
-        text-align: center;
-    }
-
-    .custom-icon{
-        width: 30%;
-        align-self: center;
-        margin-top: 1em;
-        margin-bottom: -2em;
+        text-align: left;
     }
 
     .web {
@@ -224,15 +279,15 @@
 
     @media screen and (min-width: 769px){
 
-        .web {
-        display: block;
-    }
+.web {
+display: block;
+}
 
-    .mobile{
-        display: none;
-    }  
-    
-    .navbar-light .navbar-nav .nav-link:hover {
+.mobile{
+display: none;
+}   
+
+.navbar-light .navbar-nav .nav-link:hover {
       font-weight: 900;
     }
 
@@ -256,11 +311,15 @@
   .navbar .dropdown-item {
     text-align: left;
   }
-    }
+}
+
 
   </style>
 </head>
 <body>
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
+  
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
@@ -305,39 +364,66 @@
       </div>
     </div>
   </nav>
-  <div id="particles-js"></div>
-  <!-- About Content -->
+  
+  <!-- About Page Content -->
+    
+
+    <!-- Hero Section -->
+  <header class="hero-section">
+    
+    <div class="hero-content" style="text-align: center;">
+      <h1 style="margin-bottom: 1em; text-align: center;">eCOLE Learning Exchange 11.0</h1>
+      <p class="lead" style="text-align: center;">Empowering Modern Education</p>
+    </div>
+    <div class="scroll-down">
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+  </header>
+  
+
   <div class="container" style="padding: 2em;">
     
-    <!-- About Ehsan Jaya Ventures -->
-    <section id="about-intro">
-      <h1 class="section-title" style="font-size: 4em;">About Us</h1>
-      <div class="section-content">
-        <p>
-          Ehsan Jaya Ventures is dedicated to empowering organizations through cutting-edge digital solutions and transformative learning experiences. Founded on the belief that technology and human capital development go hand in hand, we specialize in providing advanced management systems and corporate training programs that enable our clients to thrive in today’s rapidly changing world.
-        </p>
-      </div>
+    <section id="overview">
+      <div id="particles-js"></div>
+      <h2 class="section-title">Overview</h2>
+      <p>
+        eCOLE Learning Exchange 11.0 is a state-of-the-art Learning Management System (LMS) designed to revolutionize digital education. Developed by Innove Technologies, eCOLE provides a robust, scalable platform that meets the evolving needs of educational institutions and training organizations. It seamlessly combines course management, student engagement, and administrative functions into one unified, cloud-based solution.
+      </p>
     </section>
+  
+    <section id="key-features">
+      <h2 class="section-title">Key Features</h2>
+      <h3>Course &amp; Content Management:</h3>
+      <p>
+        Organize lectures, assignments, and resources with ease, ensuring educators can efficiently deliver structured and engaging learning experiences.
+      </p>
+      
+      <h3>Personalized Learning:</h3>
+      <p>
+        Facilitate tailored instruction with features that adapt to individual student needs, promoting effective and personalized learning paths.
+      </p>
+      
+      <h3>Automated Testing &amp; Reporting:</h3>
+      <p>
+        Conduct online assessments with instant feedback and detailed performance reports, simplifying evaluation and progress tracking.
+      </p>
+      
+      <h3>Intelligent Scheduling &amp; Attendance:</h3>
+      <p>
+        Manage class timetables, monitor attendance, and streamline communication between students, teachers, and parents through integrated mobile applications.
+      </p>
+      
+      <h3>Comprehensive Administration:</h3>
+      <p>
+        From HR and payroll to fee management and library systems, eCOLE is built to handle all administrative tasks, reducing manual workload and ensuring data integrity.
+      </p>
+    </section>
+  
+    <section id="benefits">
+      <h2 class="section-title">Benefits for Educational Institutions</h2>
 
-    
-    <!-- What We Do -->
-    <section id="what-we-do">
-      <h2 class="section-title">What We Do</h2>
-      <div class="section-content">
-        <h3>Advanced Management Systems</h3>
-        <p>
-          As an authorized reseller of specialized platforms for the education and healthcare sectors, we offer digital solutions that optimize workflows, improve data management, and enhance user experiences. Our portfolio includes the eCOLE Learning Exchange (eLX) for educational institutions and Saaga Healthcare for hospitals—both designed to simplify complex operations and drive efficiency.
-        </p>
-        <h3>Corporate Training &amp; Development</h3>
-        <p>
-          We believe that an organization’s greatest asset is its people. Our comprehensive training programs focus on leadership, technical skills, team-building, and more. By combining industry best practices with interactive learning methods, we ensure that professionals not only gain valuable knowledge but also the confidence to apply it effectively.
-        </p>
-      </div>
-    </section>
-    
-    <!-- Why We're Different -->
-    <section id="why-different">
-      <h2 class="section-title">Why We’re Different</h2>
+
+      
       <div class="section-content">
         <div class="row g-4">
             <!-- Card 1: Holistic Approach -->
@@ -345,9 +431,9 @@
               <div class="card h-100">
                 <img src="holistic-icon.png" alt="" class="custom-icon">
                 <div class="card-body">
-                  <h3 style="font-size: 1.5em;" class="card-title">Holistic Approach</h3>
+                  <h3 style="font-size: 1.5em;" class="card-title">Enhanced Engagement</h3>
                   <p>
-                    We seamlessly integrate technology solutions with training services, ensuring that every tool or platform is supported by the right skill set for maximum impact.
+                    Foster a dynamic learning environment where students, teachers, and parents collaborate seamlessly.
                   </p>
                 </div>
               </div>
@@ -357,9 +443,9 @@
               <div class="card h-100">
                 <img src="customise-icon.png" alt="" class="custom-icon">
                 <div class="card-body">
-                  <h3 style="font-size: 1.5em;" class="card-title">Customization</h3>
+                  <h3 style="font-size: 1.5em;" class="card-title">Operational Efficiency</h3>
                   <p>
-                    We recognize that each organization is unique. Our solutions and training modules are tailored to address specific goals, challenges, and cultural nuances.
+                    Automate routine tasks and optimize resource management to focus on enhancing educational quality.
                   </p>
                 </div>
               </div>
@@ -369,12 +455,12 @@
               <div class="card h-100">
                 <img src="expertise-icon.png" alt="" class="custom-icon">
                 <div class="card-body">
-                  <h3 style="font-size: 1.5em;" class="card-title">Expertise &amp; Experience</h3>
+                  <h3 style="font-size: 1.5em;" class="card-title">Scalability &amp; Flexibility</h3>
                   <p class="web">
-                    Backed by a team of seasoned professionals, we bring real-world insights and<br>proven strategies to every engagement.
+                    Customize the platform to match your institution's specific requirements, from K-12 schools to higher education institutions.
                   </p>
                   <p class="mobile">
-                    Backed by a team of seasoned professionals, we bring real-world insights and proven strategies to every engagement.
+                    Customize the platform to match your institution's specific requirements, from K-12 schools to higher education institutions.
                   </p>
                 </div>
               </div>
@@ -384,9 +470,9 @@
               <div class="card h-100">
                 <img src="partnership-icon.png" alt="" class="custom-icon">
                 <div class="card-body">
-                  <h3 style="font-size: 1.5em;" class="card-title">Long-Term Partnerships</h3>
+                  <h3 style="font-size: 1.5em;" class="card-title">Data-Driven Decisions</h3>
                   <p>
-                    Beyond implementation and training, we remain committed to our clients’ ongoing success, offering continued support, updates, and enhancements.
+                    Leverage comprehensive reporting tools that provide insights into academic performance and operational efficiency.
                   </p>
                 </div>
               </div>
@@ -394,31 +480,21 @@
           </div>
       </div>
     </section>
-    
-    <!-- Our Vision -->
-    <section id="vision">
-      <h2 class="section-title">Our Vision</h2>
-      <div class="section-content">
-        <p>
-          We envision a future where organizations are empowered to innovate fearlessly, adapt rapidly, and flourish sustainably. By bridging the gap between digital transformation and human capital development, we aim to be the catalyst for positive change in every industry we serve.
-        </p>
-        <p>
-          At Ehsan Jaya Ventures, we believe that when technology and talent work in harmony, possibilities become limitless. Whether you’re seeking to revolutionize your institution’s management systems or uplift your team’s capabilities, we stand ready to guide you on your journey to excellence.
-        </p>
-      </div>
-    </section>
-
-    <!-- Our Mission -->
-    <section id="mission">
-        <h2 class="section-title">Our Mission</h2>
-        <div class="section-content">
-          <p>
-            To help institutions and businesses streamline their operations, elevate team performance, and achieve sustainable growth by integrating innovative technology with skill-based training.
-          </p>
-        </div>
-      </section>
-  </div>
   
+    <section id="why-choose">
+      <h2 class="section-title">Why Choose eCOLE?</h2>
+      <p>
+        eCOLE Learning Exchange 11.0 is not just an LMS—it's a transformative tool designed to drive digital education forward. With its intuitive interface, robust feature set, and proven track record, eCOLE empowers institutions to deliver a modern, interactive, and engaging educational experience. Whether you're looking to enhance remote learning or streamline campus operations, eCOLE provides the flexibility and reliability needed to succeed in today’s fast-paced educational landscape.
+      </p>
+    </section>
+  
+    <section id="call-to-action">
+      <h2 class="section-title">Discover the Future of Digital Education</h2>
+      <p>
+        Join the growing number of institutions that trust eCOLE to transform their learning environment. Explore our comprehensive solutions and take the first step toward a more efficient and engaging educational experience.
+      </p>
+    </section>
+  </div>
   
   <!-- Footer -->
   <footer class="text-center">
@@ -430,24 +506,23 @@
   <!-- Particles.js Library -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
-    /* Initialize particles.js with a sample configuration */
     particlesJS("particles-js", {
       "particles": {
         "number": {
           "value": 200,
           "density": {
             "enable": true,
-            "value_area": 1000
+            "value_area": 800
           }
         },
         "color": {
-          "value": "#D9A03F"
+          "value": "#0C1E38"
         },
         "shape": {
           "type": "circle",
           "stroke": {
             "width": 0,
-            "color": "#D9A03F"
+            "color": "#0C1E38"
           },
           "polygon": {
             "nb_sides": 6
@@ -476,8 +551,8 @@
         "line_linked": {
           "enable": true,
           "distance": 150,
-          "color": "#D9A03F",
-          "opacity": 0.4,
+          "color": "#0C1E38",
+          "opacity": 0.25,
           "width": 1
         },
         "move": {
