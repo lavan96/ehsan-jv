@@ -252,6 +252,119 @@
     background-color: transparent;
   }
 
+  /* Optional: Adjust spacing for accordion */
+  .accordion-item {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 0.5em;
+      background-color: #fafafa;
+    }
+    .accordion-header button {
+      font-size: 0.7em;
+      text-align: left;
+      height: 3em;
+      padding-left: 1em;
+      color: white;
+    }
+    .accordion-button {
+      padding: 8px;
+      color: #fff;
+      font-weight: 600;
+    }
+    /* Colors for each section based on original table colors */
+    #headingEducationManagement .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseEducationManagement {
+      background-color: rgba(125,0,0,0);
+    }
+    #headingCampusManagement .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseCampusManagement {
+      background-color: rgba(125,0,0,0);
+    }
+    #headingLearningExchange .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseLearningExchange {
+      background-color: rgba(125,0,0,0);
+    }
+    #headingPortals .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapsePortals {
+      background-color: rgba(125,0,0,0);
+    }
+    #headingFinancials .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseFinancials {
+      background-color: #f8d7da;
+    }
+    #headingHRMS .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseHRMS {
+      background-color: rgba(125,0,0,0);
+    }
+    #headingReporting .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseReporting {
+      background-color: rgba(125,0,0,0);
+    }
+    #headingMobileApps .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseMobileApps {
+      background-color: rgba(125,0,0,0);
+    }
+
+    .accordion-button:not(.collapsed) {
+  color: #fff !important;
+}
+
+/* For collapsed accordion button, show plus icon */
+.accordion-button::before {
+  background-image: none; /* Remove default icon */
+  content: "\f067"; /* Font Awesome plus icon */
+  font-family: "Font Awesome 6 Free"; /* Make sure this matches your Font Awesome version */
+  font-weight: 900;
+  color: #fff; /* White icon */
+  font-size: 1.25rem;
+  margin-right: 1em;
+}
+
+/* For expanded accordion button, show minus icon */
+.accordion-button:not(.collapsed)::before {
+  content: "\f068"; /* Font Awesome minus icon */
+  color: #fff; /* White icon */
+}
+
+ul.checklist {
+      list-style: none;
+      padding-left: 0em;
+    }
+    ul.checklist li {
+      position: relative;
+      padding-left: 2em;
+      margin-bottom: 10px;
+      
+    }
+
+ul.checklist li::before {
+      content: "\f058";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #0C1E38;
+    }
+
+
     @media screen and (max-width: 768px){
 
         ul.navbar-nav {
@@ -400,30 +513,219 @@ display: none;
   
     <section id="key-features">
       <h2 class="section-title">Key Features</h2>
-      <h3>Course &amp; Content Management:</h3>
-      <p>
-        Organize lectures, assignments, and resources with ease, ensuring educators can efficiently deliver structured and engaging learning experiences.
-      </p>
-      
-      <h3>Personalized Learning:</h3>
-      <p>
-        Facilitate tailored instruction with features that adapt to individual student needs, promoting effective and personalized learning paths.
-      </p>
-      
-      <h3>Automated Testing &amp; Reporting:</h3>
-      <p>
-        Conduct online assessments with instant feedback and detailed performance reports, simplifying evaluation and progress tracking.
-      </p>
-      
-      <h3>Intelligent Scheduling &amp; Attendance:</h3>
-      <p>
-        Manage class timetables, monitor attendance, and streamline communication between students, teachers, and parents through integrated mobile applications.
-      </p>
-      
-      <h3>Comprehensive Administration:</h3>
-      <p>
-        From HR and payroll to fee management and library systems, eCOLE is built to handle all administrative tasks, reducing manual workload and ensuring data integrity.
-      </p>
+      <div class="accordion" id="eCOLEAccordion">
+        <!-- eCOLE Education Management -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingEducationManagement">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEducationManagement" aria-expanded="true" aria-controls="collapseEducationManagement">
+              eCOLE Education Management
+            </button>
+          </h2>
+          <div id="collapseEducationManagement" class="accordion-collapse collapse" aria-labelledby="headingEducationManagement" data-bs-parent="#eCOLEAccordion">
+            <div class="accordion-body">
+              <ul class="mb-0 checklist" style="padding-left: 0px;">
+                <li>Student Management</li>
+                <li>Parent Management</li>
+                <li>Enquiry &amp; Pre-Admission Management</li>
+                <li>Center Management</li>
+                <li>Examinations Management</li>
+                <li>Attendance</li>
+                <li>Leave Management</li>
+                <li>Schedules and TimeTables</li>
+                <li>Course Management</li>
+                <li>Class / Batch Management</li>
+                <li>Semester / Term Management</li>
+                <li>Staff Management</li>
+                <li>Contact / User Management</li>
+                <li>Placement Management</li>
+                <li>Certification Management</li>
+                <li>Work Orders Management</li>
+                <li>Document Management</li>
+                <li>Alumni Management</li>
+                <li>Alert Management</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- eCOLE Campus Management -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingCampusManagement">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCampusManagement" aria-expanded="false" aria-controls="collapseCampusManagement">
+              eCOLE Campus Management
+            </button>
+          </h2>
+          <div id="collapseCampusManagement" class="accordion-collapse collapse" aria-labelledby="headingCampusManagement" data-bs-parent="#eCOLEAccordion">
+            <div class="accordion-body">
+              <ul class="mb-0 checklist" style="padding-left: 0px;">
+                <li>Resources Management</li>
+                <li>Library Management</li>
+                <li>Hostel Management</li>
+                <li>Bus and Transport Management</li>
+                <li>Canteen Management</li>
+                <li>Budget Management</li>
+                <li>Asset Management</li>
+                <li>Inventory Management</li>
+                <li>Housekeeping</li>
+                <li>Facility Management</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- eCOLE Learning eXchange -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingLearningExchange">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLearningExchange" aria-expanded="false" aria-controls="collapseLearningExchange">
+              eCOLE Learning eXchange
+            </button>
+          </h2>
+          <div id="collapseLearningExchange" class="accordion-collapse collapse" aria-labelledby="headingLearningExchange" data-bs-parent="#eCOLEAccordion">
+            <div class="accordion-body">
+              <ul class="mb-0 checklist" style="padding-left: 0px;">
+                <li>Content Management – Lectures, Topics, Schedules</li>
+                <li>Content Delivery Tools</li>
+                <li>Testing and Evaluation</li>
+                <li>Question Bank Module</li>
+                <li>Report / Marks Cards</li>
+                <li>Discussion Forum</li>
+                <li>Feedback Management</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- eCOLE Portals -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingPortals">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePortals" aria-expanded="false" aria-controls="collapsePortals">
+              eCOLE Portals
+            </button>
+          </h2>
+          <div id="collapsePortals" class="accordion-collapse collapse" aria-labelledby="headingPortals" data-bs-parent="#eCOLEAccordion">
+            <div class="accordion-body">
+              <ul class="mb-0 checklist" style="padding-left: 0px;">
+                <li>Registration</li>
+                <li>Quick Data / Dashboards</li>
+                <li>Profile Management</li>
+                <li>Homework</li>
+                <li>Announcements</li>
+                <li>Events/Registration</li>
+                <li>Schedules</li>
+                <li>Attendance</li>
+                <li>Communicate</li>
+                <li>Newsletter</li>
+                <li>Manage My Fees</li>
+                <li>Manage My Subjects</li>
+                <li>Payments</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- eCOLE Financials -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFinancials">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFinancials" aria-expanded="false" aria-controls="collapseFinancials">
+              eCOLE Financials
+            </button>
+          </h2>
+          <div id="collapseFinancials" class="accordion-collapse collapse" aria-labelledby="headingFinancials" data-bs-parent="#eCOLEAccordion">
+            <div class="accordion-body">
+              <ul class="mb-0 checklist" style="padding-left: 0px;">
+                <li>Payment Master / Fee Scheme Master</li>
+                <li>Invoice Module</li>
+                <li>Receipt Module</li>
+                <li>Credit Note Module</li>
+                <li>Transactions Module</li>
+                <li>Franchise Management</li>
+                <li>Bursary / Fund Management</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- eCOLE HRMS & Payroll -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingHRMS">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHRMS" aria-expanded="false" aria-controls="collapseHRMS">
+              eCOLE HRMS &amp; Payroll
+            </button>
+          </h2>
+          <div id="collapseHRMS" class="accordion-collapse collapse" aria-labelledby="headingHRMS" data-bs-parent="#eCOLEAccordion">
+            <div class="accordion-body">
+              <ul class="mb-0 checklist" style="padding-left: 0px;">
+                <li>Setup Workgroup/ Grade/ Department/ Designation</li>
+                <li>Recruitment Process</li>
+                <li>Leave Rule Management</li>
+                <li>Employee Management</li>
+                <li>Leave Management</li>
+                <li>On Duty Management</li>
+                <li>Transfer Management</li>
+                <li>Appraisal Management</li>
+                <li>Deputation Management</li>
+                <li>Training Management</li>
+                <li>Separation/Resignation Management</li>
+                <li>Conveyance Management</li>
+                <li>Pay Scale Definition</li>
+                <li>Employee Attendance</li>
+                <li>Monthly Earnings/Deductions</li>
+                <li>Loans / Advances</li>
+                <li>Pay Calculation</li>
+                <li>Travel / Health Declarations</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- eCOLE Reporting and Analytics -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingReporting">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseReporting" aria-expanded="false" aria-controls="collapseReporting">
+              eCOLE Reporting and Analytics
+            </button>
+          </h2>
+          <div id="collapseReporting" class="accordion-collapse collapse" aria-labelledby="headingReporting" data-bs-parent="#eCOLEAccordion">
+            <div class="accordion-body">
+              <ul class="mb-0 checklist" style="padding-left: 0px;">
+                <li>Dashboards</li>
+                <li>Basic Reports</li>
+                <li>Custom Reports</li>
+                <li>Analytics Engine</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Mobile Apps -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingMobileApps">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMobileApps" aria-expanded="false" aria-controls="collapseMobileApps">
+              Mobile Apps
+            </button>
+          </h2>
+          <div id="collapseMobileApps" class="accordion-collapse collapse" aria-labelledby="headingMobileApps" data-bs-parent="#eCOLEAccordion">
+            <div class="accordion-body">
+              <ul class="mb-0 checklist" style="padding-left: 0px;">
+                <li>Registration</li>
+                <li>Quick Data / Dashboards</li>
+                <li>Profile Management</li>
+                <li>Homework</li>
+                <li>Announcements</li>
+                <li>Events/Registration</li>
+                <li>Schedules</li>
+                <li>Attendance</li>
+                <li>Communicate</li>
+                <li>Newsletter</li>
+                <li>Manage My Fees</li>
+                <li>Manage My Subjects</li>
+                <li>Payments</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+      </div>
     </section>
   
     <section id="benefits">
@@ -523,13 +825,13 @@ display: none;
           }
         },
         "color": {
-          "value": "#0C1E38"
+          "value": "#3c57c4"
         },
         "shape": {
           "type": "circle",
           "stroke": {
             "width": 0,
-            "color": "#0C1E38"
+            "color": "#3c57c4"
           },
           "polygon": {
             "nb_sides": 6
@@ -558,7 +860,7 @@ display: none;
         "line_linked": {
           "enable": true,
           "distance": 150,
-          "color": "#0C1E38",
+          "color": "#3c57c4",
           "opacity": 0.25,
           "width": 1
         },
