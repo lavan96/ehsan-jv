@@ -365,6 +365,7 @@ ul.checklist li::before {
         ul.navbar-nav {
         text-align: left;
         padding-top: 1em;
+        color: #fff;
       }
 
       h3.card-title {
@@ -407,13 +408,44 @@ ul.checklist li::before {
     }
     .navbar .dropdown-item {
     text-align: left;
+    color: white;
   }
 
   hr {
     border-width: 2px;
-    border-color: #0C1E38;
+    border-color: #fff;
+  }
+
+  #navbarNav {
+    background-color: #0C1E38;
+    margin: -1em;
+    margin-top: 1em;
+  }
+    
+  .dropdown-menu {
+    background-color: #0C1E38;
+    border: none;
+    text-align: right;
+    color: white;
+    padding-left: 1em;
+  }
+  .dropdown-item {
+    
+    color: white;
+    text-transform: uppercase;
+    font-size: 1em;
+    text-align: right;
   }
   
+  .navbar-light .navbar-nav .nav-link {
+      color: white !important;
+      padding-left: 1em;
+      transition: color 0.3s;
+    }
+
+    .navbar .dropdown-item:hover {
+        color: #fff;
+  }
     }
 
     @media screen and (min-width: 769px){
