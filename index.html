@@ -445,6 +445,23 @@
     .navbar .dropdown-item:hover {
         color: #fff;
   }
+
+  /* 1. Hide the default Bootstrap caret. */
+.nav-link.dropdown-toggle::after {
+  display: none !important;
+}
+
+/* 2. Optionally style your custom icon. */
+.custom-dropdown i {
+  color: inherit;     /* Inherits link color */
+  font-size: 0.9em;   /* Adjust icon size as desired */
+  padding-right: 1em;
+  transition: transform 0.3s;
+}
+
+.custom-dropdown[aria-expanded="true"] i {
+  transform: rotateX(180deg);
+}
     }
 
     @media screen and (min-width: 769px) {
@@ -498,6 +515,22 @@
   .navbar .dropdown-item {
     text-align: left;
   }
+
+  .nav-link.dropdown-toggle::after {
+  display: none !important;
+}
+
+/* 2. Optionally style your custom icon. */
+.custom-dropdown i {
+  color: inherit;     /* Inherits link color */
+  font-size: 0.9em;   /* Adjust icon size as desired */
+  padding-right: 1em;
+  transition: transform 0.3s;
+}
+
+.custom-dropdown[aria-expanded="true"] i {
+  transform: rotateX(180deg);
+}
     }
   </style>
 </head>
@@ -519,9 +552,19 @@
             <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li><hr>
           <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li><hr>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown" role="button" 
-               data-bs-toggle="dropdown" aria-expanded="false">
-              Products
+            <a 
+              class="nav-link dropdown-toggle d-flex justify-content-between align-items-center custom-dropdown" 
+              href="services.html" 
+              id="servicesDropdown" 
+              role="button" 
+              data-bs-toggle="dropdown" 
+              aria-expanded="false"
+            >
+              <span>Products</span>
+              <!-- Your icon on the right -->
+               <div>
+              <i class="fa-solid fa-angle-down ms-2"></i>
+            </div>
             </a>
             <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
               <li><a class="dropdown-item" href="education-system.html">Education</a></li>
@@ -529,16 +572,27 @@
             </ul>
           </li><hr>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="training.html" id="servicesDropdown" role="button" 
-               data-bs-toggle="dropdown" aria-expanded="false">
-              Training
+            <a 
+              class="nav-link dropdown-toggle d-flex justify-content-between align-items-center custom-dropdown" 
+              href="services.html" 
+              id="servicesDropdown" 
+              role="button" 
+              data-bs-toggle="dropdown" 
+              aria-expanded="false"
+            >
+              <span>Training</span>
+              <!-- Your icon on the right -->
+              <div>
+                <i class="fa-solid fa-angle-down ms-2"></i>
+              </div>
             </a>
             <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-              <li><a class="dropdown-item" href="services.html#portable-bar">Management</a></li>
-              <li><a class="dropdown-item" href="services.html#bartenders">Digital</a></li>
-              <li><a class="dropdown-item" href="services.html#cocktails-mocktails">Leadership</a></li>
-              <li><a class="dropdown-item" href="services.html#glasswares">Team Building</a></li>
-              <li><a class="dropdown-item" href="services.html#flavor-blaster">System Competency</a></li>
+              <li><a class="dropdown-item" href="services.html#portable-bar">Digital Technology</a></li>
+              <li><a class="dropdown-item" href="services.html#bartenders">Commercial</a></li>
+              <li><a class="dropdown-item" href="services.html#cocktails-mocktails">Management</a></li>
+              <li><a class="dropdown-item" href="services.html#glasswares">Holistic Living</a></li>
+              <li><a class="dropdown-item" href="services.html#flavor-blaster">Soft Skills</a></li>
+              <li><a class="dropdown-item" href="services.html#flavor-blaster">OSHA</a></li>
             </ul>
           </li><hr>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li><hr>
