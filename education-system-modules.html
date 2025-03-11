@@ -550,23 +550,44 @@ display: none;
           <li class="nav-item dropdown">
             <a 
               class="nav-link dropdown-toggle d-flex justify-content-between align-items-center custom-dropdown" 
-              href="services.html" 
-              id="servicesDropdown" 
+              href="#" 
+              id="productsDropdown" 
               role="button" 
               data-bs-toggle="dropdown" 
               aria-expanded="false"
             >
               <span>Products</span>
-              <!-- Your icon on the right -->
-               <div>
-              <i class="fa-solid fa-angle-down ms-2"></i>
-            </div>
+              <div>
+                <i class="fa-solid fa-angle-down ms-2"></i>
+              </div>
             </a>
-            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-              <li><a class="dropdown-item" href="education-system.html">Education</a></li>
-              <li><a class="dropdown-item" href="services.html#bartenders">Healthcare</a></li>
+            <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+              <!-- Nested Dropdown for Education -->
+              <li class="dropdown-submenu">
+                <a class="dropdown-item" href="#" id="educationSubDropdown" aria-expanded="false" style="background-color: #0C1E38; color: white;">
+                  Education
+                </a>
+                <ul class="" aria-labelledby="educationSubDropdown" style="list-style: none; margin-left: -2em; padding-bottom: 0.5em;">
+                  <li><a class="dropdown-item" href="education-system.html">Overview</a></li>
+                  <li><a class="dropdown-item" href="education-system-modules.html">Modules</a></li>
+                </ul>
+              </li><hr class="mobile" style="width: 28em;">
+              <!-- Nested Dropdown for Healthcare -->
+              <li class="dropdown-submenu">
+                <a class="dropdown-item" href="#" id="healthcareSubDropdown" aria-expanded="false" style="background-color: #0C1E38; color: white;">
+                  Healthcare
+                </a>
+                <ul class="" aria-labelledby="healthcareSubDropdown" style="list-style: none; margin-left: -2em;">
+                  <li><a class="dropdown-item" href="healthcare-overview.html">Overview</a></li>
+                  <li><a class="dropdown-item" href="healthcare-modules.html">Modules</a></li>
+                </ul>
+              </li>
             </ul>
-          </li><hr>
+          </li>
+          
+          
+          
+          <hr>
           <li class="nav-item dropdown">
             <a 
               class="nav-link dropdown-toggle d-flex justify-content-between align-items-center custom-dropdown" 
