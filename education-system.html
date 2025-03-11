@@ -363,7 +363,7 @@ ul.checklist li::before {
     @media screen and (max-width: 768px){
 
         ul.navbar-nav {
-        text-align: right;
+        text-align: left;
         padding-top: 1em;
       }
 
@@ -405,6 +405,10 @@ ul.checklist li::before {
         height:auto;
         padding-top: 3em;
     }
+    .navbar .dropdown-item {
+    text-align: left;
+  }
+  
     }
 
     @media screen and (min-width: 769px){
@@ -470,8 +474,8 @@ display: none;
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <hr><li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li><hr>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li><hr>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown" role="button" 
                data-bs-toggle="dropdown" aria-expanded="false">
@@ -481,7 +485,7 @@ display: none;
               <li><a class="dropdown-item" href="education-system.html">Education</a></li>
               <li><a class="dropdown-item" href="services.html#bartenders">Healthcare</a></li>
             </ul>
-          </li>
+          </li><hr>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="training.html" id="servicesDropdown" role="button" 
                data-bs-toggle="dropdown" aria-expanded="false">
@@ -494,8 +498,8 @@ display: none;
               <li><a class="dropdown-item" href="services.html#glasswares">Team Building</a></li>
               <li><a class="dropdown-item" href="services.html#flavor-blaster">System Competency</a></li>
             </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </li><hr>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li><hr>
         </ul>
       </div>
     </div>
