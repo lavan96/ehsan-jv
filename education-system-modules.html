@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>eCOLE Learning Exchange 11.0 - Empowering Modern Education</title>
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+  <!-- Font Awesome CSS (CDN) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-<YOUR_INTEGRITY_HASH_HERE>"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: rgba(12,30,56);
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      font-weight: 500;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    /* Headers using Poppins */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+    }
+    
+    /* Navbar (consistent with homepage) */
+    .navbar {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      padding: 0.8rem 0;
+    }
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+    }
+    .navbar-brand img {
+      height: 60px;
+      width: auto;
+    }
+    .navbar-light .navbar-nav .nav-link {
+      color: rgba(12,30,56,0.9) !important;
+      margin: 0 0.75rem;
+      transition: color 0.3s;
+    }
+    
+    /* Custom Navbar Toggler Styles */
+    .navbar-toggler {
+      background-color: #0C1E38;
+      border-color: #D9A03F;
+    }
+    .navbar-toggler-icon {
+      color: #D9A03F;
+      font-size: 1em;
+      padding-top: 0.25em;
+    }
+    ul.navbar-nav {
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    
+    /* Page Container */
+    
+    
+    /* Section Titles & Content */
+
+    section{
+      margin-top: 80px;
+      margin-bottom: 80px;
+    }
+
+    #about-intro{
+      margin-top: 180px;
+    }
+    .section-title {
+      font-weight: 700;
+      color: #0C1E38;
+      margin-bottom: 1em;
+      font-size: 2.5em;
+    }
+    .section-content p {
+      font-size: 1em;
+      line-height: 1.6;
+      margin-bottom: 1em;
+    }
+    .section-content h3 {
+      font-weight: 700;
+      color: #0C1E38;
+      margin-top: 1em;
+      margin-bottom: 0.5em;
+    } 
+    
+    /* Footer */
+    footer {
+      background: #0C1E38;
+      color: #fff;
+      padding: 20px 0;
+    }
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    
+
+    .navbar-light .navbar-nav .nav-link:hover {
+      font-weight: 900;
+    }
+
+    /* Cards */
+    .card {
+      border-color: #D9A03F;
+      border-width: 0px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+      
+      text-align: center;
+      background: #0c1e38d8; /*linear-gradient(45deg, #D9A03F,#ffe093, #EBC76B, #D9A03F, #ffe093, #D9A03F);*/
+      color: white;
+ 
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 30px rgba(0,0,0,0.1);
+    }
+    h3.card-title {
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+    .card-body,
+    .card-text,
+    .card li {
+      color: white;
+    }
+
+    .custom-icon{
+        width: 40%;
+        align-self: center;
+        margin-top: 1em;
+        margin-bottom: -2em;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      background: url("education-thumbnail-2.jpg") no-repeat center center;
+      background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    /* Static Gradient Overlay */
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, rgba(12,30,56,0.9), rgba(12,30,56,0.85));
+      z-index: 1;
+    }
+    
+    /* Hero Text */
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 90%;
+      animation: fadeInUp 1s ease-out;
+      color: #fff;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .hero-content p {
+      font-size: 1.25rem;
+    }
+    /* Scroll Down Indicator */
+    .scroll-down {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      color: #fff;
+      z-index: 3;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(-10px); }
+    }
+
+    /* Dropdown menu styling */
+  .dropdown-menu {
+    background-color: white;
+    border: none;
+    text-align: right;
+    color: #0C1E38;
+  }
+  .dropdown-item {
+    
+    color: #0C1E38;
+    text-transform: uppercase;
+    font-size: 1em;
+    text-align: right;
+  }
+  .dropdown-item:hover, 
+  .dropdown-item:focus {
+    font-weight: 900;
+    background-color: transparent;
+  }
+
+  /* Optional: Adjust spacing for accordion */
+  .accordion-item {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 0.5em;
+      background-color: #fafafa;
+    }
+    .accordion-header button {
+      font-size: 0.7em;
+      text-align: left;
+      height: 3em;
+      padding-left: 1em;
+      color: white;
+    }
+    .accordion-button {
+      padding: 8px;
+      color: #fff;
+      font-weight: 600;
+    }
+    /* Colors for each section based on original table colors */
+    #headingEducationManagement .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseEducationManagement {
+      background-color: rgba(125,0,0,0);
+    }
+    #headingCampusManagement .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseCampusManagement {
+      background-color: rgba(125,0,0,0);
+    }
+    #headingLearningExchange .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseLearningExchange {
+      background-color: rgba(125,0,0,0);
+    }
+    #headingPortals .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapsePortals {
+      background-color: rgba(125,0,0,0);
+    }
+    #headingFinancials .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseFinancials {
+      background-color: rgba(125,0,0,0);
+    }
+    #headingHRMS .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseHRMS {
+      background-color: rgba(125,0,0,0);
+    }
+    #headingReporting .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseReporting {
+      background-color: rgba(125,0,0,0);
+    }
+    #headingMobileApps .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseMobileApps {
+      background-color: rgba(125,0,0,0);
+    }
+
+    .accordion-button:not(.collapsed) {
+  color: #fff !important;
+}
+
+/* For collapsed accordion button, show plus icon */
+.accordion-button::before {
+  background-image: none; /* Remove default icon */
+  content: "\f067"; /* Font Awesome plus icon */
+  font-family: "Font Awesome 6 Free"; /* Make sure this matches your Font Awesome version */
+  font-weight: 900;
+  color: #fff; /* White icon */
+  font-size: 1.25rem;
+  margin-right: 1em;
+}
+
+/* For expanded accordion button, show minus icon */
+.accordion-button:not(.collapsed)::before {
+  content: "\f068"; /* Font Awesome minus icon */
+  color: #fff; /* White icon */
+}
+
+.accordion-button::after {
+    background-image: none;
+}
+
+ul.checklist {
+      list-style: none;
+      padding-left: 0em;
+    }
+    ul.checklist li {
+      position: relative;
+      padding-left: 2em;
+      margin-bottom: 10px;
+      
+    }
+
+ul.checklist li::before {
+      content: "\f058";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #0C1E38;
+    }
+
+
+    @media screen and (max-width: 768px){
+
+        ul.navbar-nav {
+        text-align: left;
+        padding-top: 1em;
+        color: #fff;
+      }
+
+      h3.card-title {
+      text-align: center;
+    }
+    .card-body,
+    .card-text,
+    .card li {
+        text-align: center;
+    }
+
+    .custom-icon{
+        width: 30%;
+        align-self: center;
+        margin-top: 1em;
+        margin-bottom: -2em;
+    }
+
+    .web {
+        display: none;
+    }
+
+    .mobile{
+        display: block;
+    }
+
+    .accordion-header button{
+        font-size: 0.6em;
+    }
+
+    ul.checklist li {
+      font-size: 0.8em;
+      
+    }
+
+    #features2{
+        max-width: 100%;
+        height:auto;
+        padding-top: 1em;
+    }
+    .navbar .dropdown-item {
+    text-align: left;
+    color: white;
+  }
+
+  hr {
+    border-width: 2px;
+    border-color: #fff;
+  }
+
+  #navbarNav {
+    background-color: #0C1E38;
+    margin: -1em;
+    margin-top: 1em;
+    min-height: 90vh;
+  }
+    
+  .dropdown-menu {
+    background-color: #0C1E38;
+    border: none;
+    text-align: right;
+    color: white;
+    padding-left: 1em;
+  }
+  .dropdown-item {
+    
+    color: white;
+    text-transform: uppercase;
+    font-size: 1em;
+    text-align: right;
+  }
+  
+  .navbar-light .navbar-nav .nav-link {
+      color: white !important;
+      padding-left: 1em;
+      transition: color 0.3s;
+    }
+
+    .navbar .dropdown-item:hover {
+        color: #fff;
+  }
+
+  /* 1. Hide the default Bootstrap caret. */
+.nav-link.dropdown-toggle::after {
+  display: none !important;
+}
+
+/* 2. Optionally style your custom icon. */
+.custom-dropdown i {
+  color: inherit;     /* Inherits link color */
+  font-size: 0.9em;   /* Adjust icon size as desired */
+  padding-right: 1em;
+  transition: transform 0.3s;
+}
+
+.custom-dropdown[aria-expanded="true"] i {
+  transform: rotateX(180deg);
+}
+    }
+
+    @media screen and (min-width: 769px){
+
+.web {
+display: block;
+}
+
+.mobile{
+display: none;
+}   
+
+.navbar-light .navbar-nav .nav-link:hover {
+      font-weight: 900;
+    }
+
+.navbar .dropdown:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0; /* Adjust if needed */
+  }
+  
+  /* Optionally, you can add a slight fade-in transition */
+  .dropdown-menu {
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .navbar .dropdown:hover > .dropdown-menu {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .navbar .dropdown-item {
+    text-align: left;
+  }
+
+  #features2{
+        max-width: 40%;
+        height:auto;
+        padding-top: 1em;
+    }
+
+    .modules2{
+        text-align: center;
+    }
+
+    .nav-link.dropdown-toggle::after {
+  display: none !important;
+}
+
+/* 2. Optionally style your custom icon. */
+.custom-dropdown i {
+  color: inherit;     /* Inherits link color */
+  font-size: 0.9em;   /* Adjust icon size as desired */
+  padding-left: 0.5em;
+  transition: transform 0.3s;
+}
+}
+
+
+  </style>
+</head>
+<body>
+  <!-- Particle Background -->
+  
+  
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="EHSAN JAYA VENTURES - new.png" alt="Ehsan Jaya Ventures Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+          <i class="fa-solid fa-bars"></i>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li><hr>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li><hr>
+          <li class="nav-item dropdown">
+            <a 
+              class="nav-link dropdown-toggle d-flex justify-content-between align-items-center custom-dropdown" 
+              href="services.html" 
+              id="servicesDropdown" 
+              role="button" 
+              data-bs-toggle="dropdown" 
+              aria-expanded="false"
+            >
+              <span>Products</span>
+              <!-- Your icon on the right -->
+               <div>
+              <i class="fa-solid fa-angle-down ms-2"></i>
+            </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="education-system.html">Education</a></li>
+              <li><a class="dropdown-item" href="services.html#bartenders">Healthcare</a></li>
+            </ul>
+          </li><hr>
+          <li class="nav-item dropdown">
+            <a 
+              class="nav-link dropdown-toggle d-flex justify-content-between align-items-center custom-dropdown" 
+              href="services.html" 
+              id="servicesDropdown" 
+              role="button" 
+              data-bs-toggle="dropdown" 
+              aria-expanded="false"
+            >
+              <span>Training</span>
+              <!-- Your icon on the right -->
+              <div>
+                <i class="fa-solid fa-angle-down ms-2"></i>
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="services.html#portable-bar">Digital Technology</a></li>
+              <li><a class="dropdown-item" href="services.html#bartenders">Commercial</a></li>
+              <li><a class="dropdown-item" href="services.html#cocktails-mocktails">Management</a></li>
+              <li><a class="dropdown-item" href="services.html#glasswares">Holistic Living</a></li>
+              <li><a class="dropdown-item" href="services.html#flavor-blaster">Soft Skills</a></li>
+              <li><a class="dropdown-item" href="services.html#flavor-blaster">OSHA</a></li>
+            </ul>
+          </li><hr>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li><hr>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- About Page Content -->
+    
+
+    <!-- Hero Section -->
+  <header class="hero-section">
+    
+    <div class="hero-content" style="text-align: center;">
+      <h1 style="margin-bottom: 1em; text-align: center;">eCOLE Learning Exchange 11.0</h1>
+      <p class="lead" style="text-align: center;">Empowering Modern Education</p>
+    </div>
+    <div class="scroll-down">
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+  </header>
+  
+
+  <div class="container" style="padding: 2em;">
+    
+    <section id="overview">
+      
+      <h2 class="section-title" style="font-weight: 400;">Key Features</h2>
+      <p>
+        eCOLE consists of a comprehensive set of tools that enable the institute to cover a range of activities from Student Enrolments to Payment Management to Attendance Rosters. eCOLE automates the activities of an Education Institution such as Student Registrations, Employee Management, Student's Fee generation, Prospect Management, Medical Check-up details, Attendance entry, Marks entry, Library Management, Inventory of Books, Transportation. The system supports multiple-currency and multiple-location, and can be used by on a multiple-user setup mode with Group Level and User level rights.
+    </p>
+      
+    </section>
+  <div class="modules2">
+    <img src="modules2.png" alt="" id="features2">
+  </div>
+    <section id="key-features">
+      <h2 class="section-title" style="font-weight: 400;">Modules</h2>
+      <div class="accordion" id="eCOLEAccordion">
+        <!-- eCOLE Education Management -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingEducationManagement">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEducationManagement" aria-expanded="true" aria-controls="collapseEducationManagement">
+              Education Management
+            </button>
+          </h2>
+          <div id="collapseEducationManagement" class="accordion-collapse collapse" aria-labelledby="headingEducationManagement" data-bs-parent="#eCOLEAccordion">
+            <div class="accordion-body">
+              <ul class="mb-0 checklist" style="padding-left: 0px;">
+                <li>Student Management</li>
+                <li>Parent Management</li>
+                <li>Enquiry &amp; Pre-Admission Management</li>
+                <li>Center Management</li>
+                <li>Examinations Management</li>
+                <li>Attendance</li>
+                <li>Leave Management</li>
+                <li>Schedules and TimeTables</li>
+                <li>Course Management</li>
+                <li>Class / Batch Management</li>
+                <li>Semester / Term Management</li>
+                <li>Staff Management</li>
+                <li>Contact / User Management</li>
+                <li>Placement Management</li>
+                <li>Certification Management</li>
+                <li>Work Orders Management</li>
+                <li>Document Management</li>
+                <li>Alumni Management</li>
+                <li>Alert Management</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- eCOLE Campus Management -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingCampusManagement">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCampusManagement" aria-expanded="false" aria-controls="collapseCampusManagement">
+              Campus Management
+            </button>
+          </h2>
+          <div id="collapseCampusManagement" class="accordion-collapse collapse" aria-labelledby="headingCampusManagement" data-bs-parent="#eCOLEAccordion">
+            <div class="accordion-body">
+              <ul class="mb-0 checklist" style="padding-left: 0px;">
+                <li>Resources Management</li>
+                <li>Library Management</li>
+                <li>Hostel Management</li>
+                <li>Bus and Transport Management</li>
+                <li>Canteen Management</li>
+                <li>Budget Management</li>
+                <li>Asset Management</li>
+                <li>Inventory Management</li>
+                <li>Housekeeping</li>
+                <li>Facility Management</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- eCOLE Learning eXchange -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingLearningExchange">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLearningExchange" aria-expanded="false" aria-controls="collapseLearningExchange">
+              Learning eXchange
+            </button>
+          </h2>
+          <div id="collapseLearningExchange" class="accordion-collapse collapse" aria-labelledby="headingLearningExchange" data-bs-parent="#eCOLEAccordion">
+            <div class="accordion-body">
+              <ul class="mb-0 checklist" style="padding-left: 0px;">
+                <li>Content Management – Lectures, Topics, Schedules</li>
+                <li>Content Delivery Tools</li>
+                <li>Testing and Evaluation</li>
+                <li>Question Bank Module</li>
+                <li>Report / Marks Cards</li>
+                <li>Discussion Forum</li>
+                <li>Feedback Management</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- eCOLE Portals -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingPortals">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePortals" aria-expanded="false" aria-controls="collapsePortals">
+              Portals
+            </button>
+          </h2>
+          <div id="collapsePortals" class="accordion-collapse collapse" aria-labelledby="headingPortals" data-bs-parent="#eCOLEAccordion">
+            <div class="accordion-body">
+              <ul class="mb-0 checklist" style="padding-left: 0px;">
+                <li>Registration</li>
+                <li>Quick Data / Dashboards</li>
+                <li>Profile Management</li>
+                <li>Homework</li>
+                <li>Announcements</li>
+                <li>Events/Registration</li>
+                <li>Schedules</li>
+                <li>Attendance</li>
+                <li>Communicate</li>
+                <li>Newsletter</li>
+                <li>Manage My Fees</li>
+                <li>Manage My Subjects</li>
+                <li>Payments</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- eCOLE Financials -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFinancials">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFinancials" aria-expanded="false" aria-controls="collapseFinancials">
+              Financials
+            </button>
+          </h2>
+          <div id="collapseFinancials" class="accordion-collapse collapse" aria-labelledby="headingFinancials" data-bs-parent="#eCOLEAccordion">
+            <div class="accordion-body">
+              <ul class="mb-0 checklist" style="padding-left: 0px;">
+                <li>Payment Master / Fee Scheme Master</li>
+                <li>Invoice Module</li>
+                <li>Receipt Module</li>
+                <li>Credit Note Module</li>
+                <li>Transactions Module</li>
+                <li>Franchise Management</li>
+                <li>Bursary / Fund Management</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- eCOLE HRMS & Payroll -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingHRMS">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHRMS" aria-expanded="false" aria-controls="collapseHRMS">
+              HRMS &amp; Payroll
+            </button>
+          </h2>
+          <div id="collapseHRMS" class="accordion-collapse collapse" aria-labelledby="headingHRMS" data-bs-parent="#eCOLEAccordion">
+            <div class="accordion-body">
+              <ul class="mb-0 checklist" style="padding-left: 0px;">
+                <li>Setup Workgroup/ Grade/ Department/ Designation</li>
+                <li>Recruitment Process</li>
+                <li>Leave Rule Management</li>
+                <li>Employee Management</li>
+                <li>Leave Management</li>
+                <li>On Duty Management</li>
+                <li>Transfer Management</li>
+                <li>Appraisal Management</li>
+                <li>Deputation Management</li>
+                <li>Training Management</li>
+                <li>Separation/Resignation Management</li>
+                <li>Conveyance Management</li>
+                <li>Pay Scale Definition</li>
+                <li>Employee Attendance</li>
+                <li>Monthly Earnings/Deductions</li>
+                <li>Loans / Advances</li>
+                <li>Pay Calculation</li>
+                <li>Travel / Health Declarations</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- eCOLE Reporting and Analytics -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingReporting">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseReporting" aria-expanded="false" aria-controls="collapseReporting">
+              Reporting and Analytics
+            </button>
+          </h2>
+          <div id="collapseReporting" class="accordion-collapse collapse" aria-labelledby="headingReporting" data-bs-parent="#eCOLEAccordion">
+            <div class="accordion-body">
+              <ul class="mb-0 checklist" style="padding-left: 0px;">
+                <li>Dashboards</li>
+                <li>Basic Reports</li>
+                <li>Custom Reports</li>
+                <li>Analytics Engine</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Mobile Apps -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingMobileApps">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMobileApps" aria-expanded="false" aria-controls="collapseMobileApps">
+              Mobile Apps
+            </button>
+          </h2>
+          <div id="collapseMobileApps" class="accordion-collapse collapse" aria-labelledby="headingMobileApps" data-bs-parent="#eCOLEAccordion">
+            <div class="accordion-body">
+              <ul class="mb-0 checklist" style="padding-left: 0px;">
+                <li>Registration</li>
+                <li>Quick Data / Dashboards</li>
+                <li>Profile Management</li>
+                <li>Homework</li>
+                <li>Announcements</li>
+                <li>Events/Registration</li>
+                <li>Schedules</li>
+                <li>Attendance</li>
+                <li>Communicate</li>
+                <li>Newsletter</li>
+                <li>Manage My Fees</li>
+                <li>Manage My Subjects</li>
+                <li>Payments</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+  </div>
+  
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2024 Ehsan Jaya Ventures. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- Particles.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 200,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#3c57c4"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#3c57c4"
+          },
+          "polygon": {
+            "nb_sides": 6
+          }
+        },
+        "opacity": {
+          "value": 2,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#3c57c4",
+          "opacity": 0.25,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 400,
+            "line_linked": {
+              "opacity": 0.5
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
