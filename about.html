@@ -174,6 +174,77 @@
         margin-bottom: -2em;
     }
 
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      background: url("healthcare-system-hero.webp") no-repeat center center;
+      background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      z-index: 2;
+    }
+    /* Static Gradient Overlay */
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /* background: linear-gradient(45deg, rgba(12,30,56,0.6), rgba(12,30,56,0.5)); */
+      z-index: 1;
+      
+    }
+
+    .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+    
+    /* Hero Text */
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 90%;
+      animation: fadeInUp 1s ease-out;
+      color: #fff;
+      
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .hero-content p {
+      font-size: 1.25rem;
+    }
+    /* Scroll Down Indicator */
+    .scroll-down {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      color: #fff;
+      z-index: 3;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(-10px); }
+    }
+
     /* Dropdown menu styling */
   .dropdown-menu {
     background-color: white;
@@ -281,6 +352,23 @@
 
 .custom-dropdown[aria-expanded="true"] i {
   transform: rotateX(180deg);
+}
+
+.hero-section {
+    text-align: right;
+    padding-top: 23em;
+    min-height: 95vh;
+    
+}
+
+.hero-section h1{
+    font-size: 3em;
+    margin-bottom: none;
+    text-shadow: #fff;
+}
+
+.hero-section p{
+    font-size: 1em;
 }
   
     }
@@ -409,8 +497,42 @@
   </nav>
   <div id="particles-js" class="web"></div>
   <!-- About Content -->
+
+     <!-- Hero Section -->
+     <header class="hero-section">
+      <svg class="hero-overlay mobile" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <!-- Example wave path from left to right -->
+          <path d="M 100,25
+          C 90,60 0,80 -200,100
+          L 100,100
+          Z"
+                fill="rgba(12, 30, 56, 0.5)" />
+        </svg>
+      
+      <svg class="hero-overlay web" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <!-- Example wave path from left to right -->
+          <path d="M0,0 C30,40 70,60 100,0 L100,100 L0,100 Z"
+                fill="rgba(12, 30, 56, 0.5)" />
+        </svg>
+  
+        
+        <div class="hero-content web">
+          <h1 style="text-shadow: #fff;">About Us</h1>
+          <p class="lead" style="font-weight: 700;">Streamlining Modern Healthcare</p>
+        </div>
+        <div class="hero-content mobile" style="padding-left: 10px;">
+          <h1 style="text-shadow: #fff;">About Us</h1>
+          <p class="lead" style="font-weight: 700;">Streamlining Modern Healthcare</p>
+        </div>
+        <div class="scroll-down">
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </header>
+
   <div class="container" style="padding: 2em;">
     
+  
+
     <!-- About Ehsan Jaya Ventures -->
     <section id="about-intro">
       <h1 class="section-title" style="font-size: 4em; font-weight: 400;">About Us</h1>
