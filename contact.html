@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About - Ehsan Jaya Ventures</title>
+  <title>Contact - Ehsan Jaya Ventures</title>
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@400;500&display=swap"
@@ -263,6 +263,31 @@
     background-color: transparent;
   }
 
+  .contact-section {
+            padding: 0em 0;
+        }
+
+        .contact-form {
+            background-color: transparent;
+            padding: 1em;
+            border-radius: 10px;
+            
+            font-weight: 600;
+        }
+
+        .btn-primary{
+            background-color: transparent;
+            color: #0C1E38;
+            border-color: #0C1E38;
+            border-width: 1.5px;
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus{
+            background-color: #0C1E38;
+            color: white;
+        }
+
     @media screen and (max-width: 768px){
 
         ul.navbar-nav {
@@ -494,151 +519,102 @@
     </div>
   </nav>
   <div id="particles-js" class="web"></div>
-  <!-- About Content -->
-
-     <!-- Hero Section -->
-     <header class="hero-section">
-      <svg class="hero-overlay mobile" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <!-- Example wave path from left to right -->
-          <path d="M 100,25
-          C 90,60 0,80 -200,100
-          L 100,100
-          Z"
-                fill="rgba(12, 30, 56, 0.5)" />
-        </svg>
-      
-      <svg class="hero-overlay web" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <!-- Example wave path from left to right -->
-          <path d="M0,0 C30,40 70,60 100,0 L100,100 L0,100 Z"
-                fill="rgba(12, 30, 56, 0.5)" />
-        </svg>
-  
-        
-        <div class="hero-content web">
-          <h1 style="text-shadow: #fff;">About Us</h1>
-          <p class="lead" style="font-weight: 700;">Ehsan Jaya Ventures</p>
-        </div>
-        <div class="hero-content mobile" style="margin-left: 10em;">
-          <h1 style="text-shadow: #fff;">About Us</h1>
-          <p class="lead" style="font-weight: 700;">Ehsan Jaya Ventures</p>
-        </div>
-        <div class="scroll-down">
-          <i class="fa-solid fa-chevron-down"></i>
-        </div>
-    </header>
-
-  <div class="container" style="padding: 2em;">
-    
-  
-
-    <!-- About Ehsan Jaya Ventures -->
-    <section id="about-intro">
-      <!-- <h1 class="section-title" style="font-size: 4em; font-weight: 400;">About Us</h1> -->
-      <div class="section-content">
-        <p>
-          Ehsan Jaya Ventures is dedicated to empowering organizations through cutting-edge digital solutions and transformative learning experiences. Founded on the belief that technology and human capital development go hand in hand, we specialize in providing advanced management systems and corporate training programs that enable our clients to thrive in today’s rapidly changing world.
-        </p>
-      </div>
-    </section>
-
-    
-    <!-- What We Do -->
-    <section id="what-we-do">
-      <h2 class="section-title" style="font-weight: 400;">What We Do</h2>
-      <div class="section-content">
-        <h3 style="font-weight: 400;">Advanced Management Systems</h3>
-        <p>
-          As an authorized reseller of specialized platforms for the education and healthcare sectors, we offer digital solutions that optimize workflows, improve data management, and enhance user experiences. Our portfolio includes the eCOLE Learning Exchange (eLX) for educational institutions and Saaga Healthcare for hospitals—both designed to simplify complex operations and drive efficiency.
-        </p>
-        <h3 style="font-weight: 400;">Corporate Training &amp; Development</h3>
-        <p>
-          We believe that an organization’s greatest asset is its people. Our comprehensive training programs focus on leadership, technical skills, team-building, and more. By combining industry best practices with interactive learning methods, we ensure that professionals not only gain valuable knowledge but also the confidence to apply it effectively.
-        </p>
-      </div>
-    </section>
-    
-    <!-- Why We're Different -->
-    <section id="why-different">
-      <h2 class="section-title" style="font-weight: 400;">Why We’re Different</h2>
-      <div class="section-content">
-        <div class="row g-4">
-            <!-- Card 1: Holistic Approach -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card h-100">
-                <img src="holistic-icon.png" alt="" class="custom-icon">
-                <div class="card-body">
-                  <h3 style="font-size: 1.5em;" class="card-title">Holistic Approach</h3>
-                  <p>
-                    We seamlessly integrate technology solutions with training services, ensuring that every tool or platform is supported by the right skill set for maximum impact.
-                  </p>
+  <section id="contact" class="contact-section">
+    <div class="container">
+        <h1 class="text-center mb-5" style="padding-top: 2.5em; font-weight: 700;">Contact Us</h1>
+        <form action="https://hook.eu2.make.com/qdejjbaupxy6u97esa1051jyquoqn19p" method="POST" class="contact-form web">
+            <div class="row" style="padding-top: 2em;">
+                <div class="col-md-4">
+                    <label for="name" style="padding-bottom: 0.5em; padding-top: 0.5em;">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
                 </div>
-              </div>
-            </div>
-            <!-- Card 2: Customization -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card h-100">
-                <img src="customise-icon.png" alt="" class="custom-icon">
-                <div class="card-body">
-                  <h3 style="font-size: 1.5em;" class="card-title">Customization</h3>
-                  <p>
-                    We recognize that each organization is unique. Our solutions and training modules are tailored to address specific goals, challenges, and cultural nuances.
-                  </p>
+                <div class="col-md-4">
+                    <label for="phone" style="padding-bottom: 0.5em; padding-top: 0.5em;">Company Name</label>
+                    <input type="text" id="company" name="company" class="form-control" required>
                 </div>
-              </div>
-            </div>
-            <!-- Card 3: Expertise & Experience -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card h-100">
-                <img src="expertise-icon.png" alt="" class="custom-icon">
-                <div class="card-body">
-                  <h3 style="font-size: 1.5em;" class="card-title">Expertise &amp; Experience</h3>
-                  <p class="web">
-                    Backed by a team of seasoned professionals, we bring real-world insights and<br>proven strategies to every engagement.
-                  </p>
-                  <p class="mobile">
-                    Backed by a team of seasoned professionals, we bring real-world insights and proven strategies to every engagement.
-                  </p>
+                <div class="col-md-4">
+                    <label for="email" style="padding-bottom: 0.5em; padding-top: 0.5em;">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
                 </div>
-              </div>
             </div>
-            <!-- Card 4: Long-Term Partnerships -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card h-100">
-                <img src="partnership-icon.png" alt="" class="custom-icon">
-                <div class="card-body">
-                  <h3 style="font-size: 1.5em;" class="card-title">Long-Term Partnerships</h3>
-                  <p>
-                    Beyond implementation and training, we remain committed to our clients’ ongoing success, offering continued support, updates, and enhancements.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-    </section>
-    
-    <!-- Our Vision -->
-    <section id="vision">
-      <h2 class="section-title" style="font-weight: 400;">Our Vision</h2>
-      <div class="section-content">
-        <p>
-          We envision a future where organizations are empowered to innovate fearlessly, adapt rapidly, and flourish sustainably. By bridging the gap between digital transformation and human capital development, we aim to be the catalyst for positive change in every industry we serve.
-        </p>
-        <p>
-          At Ehsan Jaya Ventures, we believe that when technology and talent work in harmony, possibilities become limitless. Whether you’re seeking to revolutionize your institution’s management systems or uplift your team’s capabilities, we stand ready to guide you on your journey to excellence.
-        </p>
-      </div>
-    </section>
 
-    <!-- Our Mission -->
-    <section id="mission">
-        <h2 class="section-title" style="font-weight: 400;">Our Mission</h2>
-        <div class="section-content">
-          <p>
-            To help institutions and businesses streamline their operations, elevate team performance, and achieve sustainable growth by integrating innovative technology with skill-based training.
-          </p>
-        </div>
-      </section>
+            <div class="row" style="padding-top: 2em;">
+                <div class="col-md-6">
+                    <label for="event-venue" style="padding-bottom: 0.5em; padding-top: 0.5em;">Company Website</label>
+                    <input type="text" id="website" name="website" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="event-type" style="padding-bottom: 0.5em; padding-top: 0.5em;">Purpose of Contact</label>
+                    <select id="event-type" name="event-type" class="form-control" required>
+                        <option value="Education">eCOLE Learning eXchange</option>
+                        <option value="Healthcare">SAAGA Healthcare</option>
+                        <option value="Training">Training Consultancy</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="row" style="padding-top: 2em;">
+                <div class="col-md-12">
+                    <label for="additional-info" style="padding-bottom: 0.5em; padding-top: 0.5em;">Additional Information</label>
+                    <textarea id="additional-info" name="additional-info" class="form-control"></textarea>
+                </div>
+            </div>
+
+            <div class="row" style="padding-top: 2em;">
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+
+        <form action="https://hook.eu2.make.com/qdejjbaupxy6u97esa1051jyquoqn19p" method="POST" class="contact-form mobile">
+            <div class="row" style="padding-top: 1em;">
+                <div class="col-md-4">
+                    <label for="name" style="padding-bottom: 0.5em; padding-top: 0.5em;">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="phone" style="padding-bottom: 0.5em; padding-top: 0.5em;">Company Name</label>
+                    <input type="text" id="company" name="company" class="form-control" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="email" style="padding-bottom: 0.5em; padding-top: 0.5em;">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="event-venue" style="padding-bottom: 0.5em; padding-top: 0.5em;">Company Website</label>
+                    <input type="text" id="website" name="website" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="event-type" style="padding-bottom: 0.5em; padding-top: 0.5em;">Purpose of Contact</label>
+                    <select id="event-type" name="event-type" class="form-control" required>
+                        <option value="Education">eCOLE Learning eXchange</option>
+                        <option value="Healthcare">SAAGA Healthcare</option>
+                        <option value="Training">Training Consultancy</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <label for="additional-info" style="padding-bottom: 0.5em; padding-top: 0.5em;">Additional Information</label>
+                    <textarea id="additional-info" name="additional-info" class="form-control"></textarea>
+                </div>
+            </div>
+
+            <div class="row" style="padding-top: 2em;">
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
   </div>
   
   
