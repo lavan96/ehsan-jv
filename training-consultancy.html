@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About - Ehsan Jaya Ventures</title>
+  <title>Ehsan Jaya Ventures - Training Consultancy</title>
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@400;500&display=swap"
@@ -17,7 +17,7 @@
   <!-- Font Awesome CSS (CDN) -->
   <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
     integrity="sha512-<YOUR_INTEGRITY_HASH_HERE>"
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
@@ -40,10 +40,7 @@
     /* Headers using Poppins */
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Poppins', sans-serif;
-    }
-
-    h2{
-        font-weight: 400;
+      font-weight: 700;
     }
     
     /* Navbar (consistent with homepage) */
@@ -94,7 +91,9 @@
       margin-bottom: 80px;
     }
 
-  
+    #about-intro{
+      margin-top: 180px;
+    }
     .section-title {
       font-weight: 700;
       color: #0C1E38;
@@ -124,15 +123,7 @@
       font-size: 0.9rem;
     }
 
-    #particles-js {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      pointer-events: none;
-    }
+    
 
     .navbar-light .navbar-nav .nav-link:hover {
       font-weight: 900;
@@ -175,7 +166,7 @@
     /* Hero Section */
     .hero-section {
       position: relative;
-      background: url("oval-damansara.jpg") no-repeat center center;
+      background: url("training-hero.jpg") no-repeat center center;
       background-size: cover;
       min-height: 100vh;
       display: flex;
@@ -183,6 +174,7 @@
       justify-content: center;
       text-align: center;
       overflow: hidden;
+      color: white;
       z-index: 2;
     }
     /* Static Gradient Overlay */
@@ -196,6 +188,7 @@
       /* background: linear-gradient(45deg, rgba(12,30,56,0.6), rgba(12,30,56,0.5)); */
       z-index: 1;
       
+      
     }
 
     .hero-overlay {
@@ -205,15 +198,14 @@
   width: 100%;
   height: 100%;
 }
-    
-    /* Hero Text */
-    .hero-content {
+
+/* Hero Text */
+.hero-content {
       position: relative;
       z-index: 3;
       max-width: 90%;
       animation: fadeInUp 1s ease-out;
       color: #fff;
-      
     }
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(30px); }
@@ -263,11 +255,129 @@
     background-color: transparent;
   }
 
+  /* Optional: Adjust spacing for accordion */
+  .accordion-item {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 0.5em;
+      background-color: #fafafa;
+    }
+    .accordion-header button {
+      font-size: 0.7em;
+      text-align: left;
+      height: 3em;
+      padding-left: 1em;
+      color: white;
+    }
+    .accordion-button {
+      padding: 8px;
+      color: #fff;
+      font-weight: 600;
+    }
+    /* Colors for each section based on original table colors */
+    #headingEducationManagement .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseEducationManagement {
+      background-color: rgba(125,0,0,0);
+    }
+    #headingCampusManagement .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseCampusManagement {
+      background-color: rgba(125,0,0,0);
+    }
+    #headingLearningExchange .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseLearningExchange {
+      background-color: rgba(125,0,0,0);
+    }
+    #headingPortals .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapsePortals {
+      background-color: rgba(125,0,0,0);
+    }
+    #headingFinancials .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseFinancials {
+      background-color: rgba(125,0,0,0);
+    }
+    #headingHRMS .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseHRMS {
+      background-color: rgba(125,0,0,0);
+    }
+    #headingReporting .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseReporting {
+      background-color: rgba(125,0,0,0);
+    }
+    #headingMobileApps .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseMobileApps {
+      background-color: rgba(125,0,0,0);
+    }
+
+    .accordion-button:not(.collapsed) {
+  color: #fff !important;
+}
+
+/* For collapsed accordion button, show plus icon */
+.accordion-button::before {
+  background-image: none; /* Remove default icon */
+  content: "\f067"; /* Font Awesome plus icon */
+  font-family: "Font Awesome 6 Free"; /* Make sure this matches your Font Awesome version */
+  font-weight: 900;
+  color: #fff; /* White icon */
+  font-size: 1.25rem;
+  margin-right: 1em;
+}
+
+/* For expanded accordion button, show minus icon */
+.accordion-button:not(.collapsed)::before {
+  content: "\f068"; /* Font Awesome minus icon */
+  color: #fff; /* White icon */
+}
+
+.accordion-button::after {
+    background-image: none;
+}
+
+ul.checklist {
+      list-style: none;
+      padding-left: 0em;
+    }
+    ul.checklist li {
+      position: relative;
+      padding-left: 2em;
+      margin-bottom: 10px;
+      
+    }
+
+ul.checklist li::before {
+      content: "\f058";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #0C1E38;
+    }
+
+
     @media screen and (max-width: 768px){
 
         ul.navbar-nav {
         text-align: left;
         padding-top: 1em;
+        color: #fff;
       }
 
       h3.card-title {
@@ -294,8 +404,29 @@
         display: block;
     }
 
+    .accordion-header button{
+        font-size: 0.6em;
+    }
+
+    ul.checklist li {
+      font-size: 0.8em;
+      
+    }
+
+    #features2{
+        max-width: 100%;
+        height:auto;
+        padding-top: 3em;
+    }
+
+    #modules2{
+        max-width: 100%;
+        height:auto;
+        padding-top: 3em;
+    }
     .navbar .dropdown-item {
     text-align: left;
+    color: white;
   }
 
   hr {
@@ -324,7 +455,7 @@
     font-size: 1em;
     text-align: right;
   }
-
+  
   .navbar-light .navbar-nav .nav-link {
       color: white !important;
       padding-left: 1em;
@@ -362,26 +493,24 @@
 .hero-section h1{
     font-size: 3em;
     margin-bottom: none;
-    text-shadow: #fff;
 }
 
 .hero-section p{
     font-size: 1em;
 }
-  
     }
 
     @media screen and (min-width: 769px){
 
-        .web {
-        display: block;
-    }
+.web {
+display: block;
+}
 
-    .mobile{
-        display: none;
-    }  
-    
-    .navbar-light .navbar-nav .nav-link:hover {
+.mobile{
+display: none;
+}   
+
+.navbar-light .navbar-nav .nav-link:hover {
       font-weight: 900;
     }
 
@@ -406,7 +535,22 @@
     text-align: left;
   }
 
-  /* 2. Optionally style your custom icon. */
+  #features2{
+        max-width: 30%;
+        height:auto;
+        padding-top: 3em;
+    }
+
+    #modules2{
+        max-width: 40%;
+        height: auto;
+        padding: 1em;
+    }
+
+    .nav-link.dropdown-toggle::after {
+  display: none !important;
+}
+
 /* 2. Optionally style your custom icon. */
 .custom-dropdown i {
   color: inherit;     /* Inherits link color */
@@ -414,15 +558,13 @@
   padding-left: 0.5em;
   transition: transform 0.3s;
 }
-
-.nav-link.dropdown-toggle::after {
-  display: none !important;
 }
-    }
+
 
   </style>
 </head>
 <body>
+
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
@@ -454,11 +596,11 @@
               </div>
             </a>
             <ul class="dropdown-menu" aria-labelledby="productsDropdown" style="text-align: left; margin-left: 0em;">
-                <!-- Nested Dropdown for Education -->
-                <li class="nav-item"><a class="nav-link" href="education-system.html">Education</a></li>
-                <!-- Nested Dropdown for Healthcare -->
-                <li class="nav-item"><a class="nav-link" href="healthcare-system.html">Healthcare</a></li>
-              </ul>
+              <!-- Nested Dropdown for Education -->
+              <li class="nav-item"><a class="nav-link" href="education-system.html">Education</a></li>
+              <!-- Nested Dropdown for Healthcare -->
+              <li class="nav-item"><a class="nav-link" href="healthcare-system.html">Healthcare</a></li>
+            </ul>
           </li>
           
           
@@ -494,272 +636,118 @@
       </div>
     </div>
   </nav>
-  <div id="particles-js" class="web"></div>
-  <!-- About Content -->
-
-     <!-- Hero Section -->
-     <header class="hero-section">
-      <svg class="hero-overlay mobile" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <!-- Example wave path from left to right -->
-          <path d="M 100,25
-          C 90,60 0,80 -200,100
-          L 100,100
-          Z"
-                fill="rgba(12, 30, 56, 0.5)" />
-        </svg>
-      
-      <svg class="hero-overlay web" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <!-- Example wave path from left to right -->
-          <path d="M0,0 C30,40 70,60 100,0 L100,100 L0,100 Z"
-                fill="rgba(12, 30, 56, 0.5)" />
-        </svg>
   
-        
-        <div class="hero-content web">
-          <h1 style="text-shadow: #fff;">About Us</h1>
-          <p class="lead" style="font-weight: 700;">Ehsan Jaya Ventures</p>
-        </div>
-        <div class="hero-content mobile" style="margin-left: 10em;">
-          <h1 style="text-shadow: #fff;">About Us</h1>
-          <p class="lead" style="font-weight: 700;">Ehsan Jaya Ventures</p>
-        </div>
-        <div class="scroll-down">
-          <i class="fa-solid fa-chevron-down"></i>
-        </div>
-    </header>
-
-  <div class="container" style="padding: 2em;">
+  <!-- About Page Content -->
     
-  
 
-    <!-- About Ehsan Jaya Ventures -->
-    <section id="about-intro">
-      <!-- <h1 class="section-title" style="font-size: 4em; font-weight: 400;">About Us</h1> -->
-      <div class="section-content">
-        <p>
-          Ehsan Jaya Ventures is dedicated to empowering organizations through cutting-edge digital solutions and transformative learning experiences. Founded on the belief that technology and human capital development go hand in hand, we specialize in providing advanced management systems and corporate training programs that enable our clients to thrive in today’s rapidly changing world.
-        </p>
-      </div>
-    </section>
+    <!-- Hero Section -->
+  <header class="hero-section">
+    <svg class="hero-overlay mobile" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <!-- Example wave path from left to right -->
+        <path d="M 100,25
+        C 90,60 0,80 -200,100
+        L 100,100
+        Z"
+              fill="rgba(12, 30, 56, 0.5)" />
+      </svg>
+    
+    <svg class="hero-overlay web" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <!-- Example wave path from left to right -->
+        <path d="M0,0 C30,40 70,60 100,0 L100,100 L0,100 Z"
+              fill="rgba(12, 30, 56, 0.5)" />
+      </svg>
 
-    
-    <!-- What We Do -->
-    <section id="what-we-do">
-      <h2 class="section-title" style="font-weight: 400;">What We Do</h2>
-      <div class="section-content">
-        <h3 style="font-weight: 400;">Advanced Management Systems</h3>
-        <p>
-          As an authorized reseller of specialized platforms for the education and healthcare sectors, we offer digital solutions that optimize workflows, improve data management, and enhance user experiences. Our portfolio includes the eCOLE Learning Exchange (eLX) for educational institutions and Saaga Healthcare for hospitals—both designed to simplify complex operations and drive efficiency.
-        </p>
-        <h3 style="font-weight: 400;">Corporate Training &amp; Development</h3>
-        <p>
-          We believe that an organization’s greatest asset is its people. Our comprehensive training programs focus on leadership, technical skills, team-building, and more. By combining industry best practices with interactive learning methods, we ensure that professionals not only gain valuable knowledge but also the confidence to apply it effectively.
-        </p>
-      </div>
-    </section>
-    
-    <!-- Why We're Different -->
-    <section id="why-different">
-      <h2 class="section-title" style="font-weight: 400;">Why We’re Different</h2>
-      <div class="section-content">
-        <div class="row g-4">
-            <!-- Card 1: Holistic Approach -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card h-100">
-                <img src="holistic-icon.png" alt="" class="custom-icon">
-                <div class="card-body">
-                  <h3 style="font-size: 1.5em;" class="card-title">Holistic Approach</h3>
-                  <p>
-                    We seamlessly integrate technology solutions with training services, ensuring that every tool or platform is supported by the right skill set for maximum impact.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- Card 2: Customization -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card h-100">
-                <img src="customise-icon.png" alt="" class="custom-icon">
-                <div class="card-body">
-                  <h3 style="font-size: 1.5em;" class="card-title">Customization</h3>
-                  <p>
-                    We recognize that each organization is unique. Our solutions and training modules are tailored to address specific goals, challenges, and cultural nuances.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- Card 3: Expertise & Experience -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card h-100">
-                <img src="expertise-icon.png" alt="" class="custom-icon">
-                <div class="card-body">
-                  <h3 style="font-size: 1.5em;" class="card-title">Expertise &amp; Experience</h3>
-                  <p class="web">
-                    Backed by a team of seasoned professionals, we bring real-world insights and<br>proven strategies to every engagement.
-                  </p>
-                  <p class="mobile">
-                    Backed by a team of seasoned professionals, we bring real-world insights and proven strategies to every engagement.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- Card 4: Long-Term Partnerships -->
-            <div class="col-md-3 col-sm-6">
-              <div class="card h-100">
-                <img src="partnership-icon.png" alt="" class="custom-icon">
-                <div class="card-body">
-                  <h3 style="font-size: 1.5em;" class="card-title">Long-Term Partnerships</h3>
-                  <p>
-                    Beyond implementation and training, we remain committed to our clients’ ongoing success, offering continued support, updates, and enhancements.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-    </section>
-    
-    <!-- Our Vision -->
-    <section id="vision">
-      <h2 class="section-title" style="font-weight: 400;">Our Vision</h2>
-      <div class="section-content">
-        <p>
-          We envision a future where organizations are empowered to innovate fearlessly, adapt rapidly, and flourish sustainably. By bridging the gap between digital transformation and human capital development, we aim to be the catalyst for positive change in every industry we serve.
-        </p>
-        <p>
-          At Ehsan Jaya Ventures, we believe that when technology and talent work in harmony, possibilities become limitless. Whether you’re seeking to revolutionize your institution’s management systems or uplift your team’s capabilities, we stand ready to guide you on your journey to excellence.
-        </p>
-      </div>
-    </section>
+    <div class="hero-content">
+      <h1 class="mobile">Training Consultancy</h1>
+      <h1 class="web">Training Consultancy</h1>
+      <p class="lead" style="font-weight: 700;">Professional Training Solutions</p>
+    </div>
+    <div class="scroll-down">
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+  </header>
 
-    <!-- Our Mission -->
-    <section id="mission">
-        <h2 class="section-title" style="font-weight: 400;">Our Mission</h2>
-        <div class="section-content">
-          <p>
-            To help institutions and businesses streamline their operations, elevate team performance, and achieve sustainable growth by integrating innovative technology with skill-based training.
-          </p>
+  <!-- Cards Section -->
+  <section class="section-cards container">
+    <h2 class="text-center mb-5 section-title" style="font-weight: 400;">Our Programs</h2>
+    <div class="row">
+      <!-- Card 1: AI & Digital -->
+      <div class="col-md-4 mb-4">
+        <div class="card p-4">
+          <h3 class="card-title">AI & Digital</h3>
+          <p class="card-text" style="text-align: left;">Leverage emerging technologies and digital trends to innovate and transform your organization.</p>
         </div>
-      </section>
-  </div>
-  
-  
+      </div>
+      <!-- Card 2: Agile -->
+      <div class="col-md-4 mb-4">
+        <div class="card p-4">
+          <h3 class="card-title">Agile</h3>
+          <p class="card-text" style="text-align: left;">Adopt agile methodologies to enhance efficiency, adaptability, and rapid product development.</p>
+        </div>
+      </div>
+      <!-- Card 3: Microsoft -->
+      <div class="col-md-4 mb-4">
+        <div class="card p-4">
+          <h3 class="card-title">Microsoft</h3>
+          <p class="card-text" style="text-align: left;">Gain expertise in Microsoft technologies to optimize productivity and streamline workflows.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Card 4: Soft Skills -->
+      <div class="col-md-4 mb-4">
+        <div class="card p-4">
+          <h3 class="card-title">Soft Skills</h3>
+          <p class="card-text" style="text-align: left;">Enhance communication, leadership, and interpersonal skills to drive effective team collaboration.</p>
+        </div>
+      </div>
+      <!-- Card 5: Team Building -->
+      <div class="col-md-4 mb-4">
+        <div class="card p-4">
+          <h3 class="card-title">Team Building</h3>
+          <p class="card-text" style="text-align: left;">Strengthen team cohesion and foster a collaborative culture through engaging exercises.</p>
+        </div>
+      </div>
+      <!-- Card 6: Holistic Living -->
+      <div class="col-md-4 mb-4">
+        <div class="card p-4">
+          <h3 class="card-title">Holistic Living</h3>
+          <p class="card-text" style="text-align: left;">Promote well-being and a balanced lifestyle to improve personal and professional performance.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Card 7: ESG -->
+      <div class="col-md-4 mb-4">
+        <div class="card p-4">
+          <h3 class="card-title">ESG</h3>
+          <p class="card-text" style="text-align: left;">Integrate Environmental, Social, and Governance practices into your corporate strategy.</p>
+        </div>
+      </div>
+      <!-- Card 8: Business -->
+      <div class="col-md-4 mb-4">
+        <div class="card p-4">
+          <h3 class="card-title">Business</h3>
+          <p class="card-text" style="text-align: left;">Develop robust business strategies and operational excellence to drive growth and innovation.</p>
+        </div>
+      </div>
+      <!-- Card 9: Management -->
+      <div class="col-md-4 mb-4">
+        <div class="card p-4">
+          <h3 class="card-title">Management</h3>
+          <p class="card-text" style="text-align: left;">Empower leaders with advanced management techniques to steer teams and organizations to success.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
   <!-- Footer -->
-  <footer class="text-center">
+  <footer class="text-center bg-dark text-white py-3">
     <div class="container">
       <p class="mb-0">&copy; 2024 Ehsan Jaya Ventures. All rights reserved.</p>
     </div>
   </footer>
-  
-  <!-- Particles.js Library -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script>
-    /* Initialize particles.js with a sample configuration */
-    particlesJS("particles-js", {
-      "particles": {
-        "number": {
-          "value": 200,
-          "density": {
-            "enable": true,
-            "value_area": 1000
-          }
-        },
-        "color": {
-          "value": "#D9A03F"
-        },
-        "shape": {
-          "type": "circle",
-          "stroke": {
-            "width": 0,
-            "color": "#D9A03F"
-          },
-          "polygon": {
-            "nb_sides": 6
-          }
-        },
-        "opacity": {
-          "value": 2,
-          "random": false,
-          "anim": {
-            "enable": false,
-            "speed": 1,
-            "opacity_min": 0.1,
-            "sync": false
-          }
-        },
-        "size": {
-          "value": 3,
-          "random": true,
-          "anim": {
-            "enable": false,
-            "speed": 40,
-            "size_min": 0.1,
-            "sync": false
-          }
-        },
-        "line_linked": {
-          "enable": true,
-          "distance": 150,
-          "color": "#D9A03F",
-          "opacity": 0.4,
-          "width": 1
-        },
-        "move": {
-          "enable": true,
-          "speed": 2,
-          "direction": "none",
-          "random": false,
-          "straight": false,
-          "out_mode": "out",
-          "bounce": false,
-          "attract": {
-            "enable": false,
-            "rotateX": 600,
-            "rotateY": 1200
-          }
-        }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": {
-            "enable": true,
-            "mode": "repulse"
-          },
-          "onclick": {
-            "enable": true,
-            "mode": "push"
-          },
-          "resize": true
-        },
-        "modes": {
-          "grab": {
-            "distance": 400,
-            "line_linked": {
-              "opacity": 0.5
-            }
-          },
-          "bubble": {
-            "distance": 400,
-            "size": 40,
-            "duration": 2,
-            "opacity": 8,
-            "speed": 3
-          },
-          "repulse": {
-            "distance": 200,
-            "duration": 0.4
-          },
-          "push": {
-            "particles_nb": 4
-          },
-          "remove": {
-            "particles_nb": 2
-          }
-        }
-      },
-      "retina_detect": true
-    });
-  </script>
+
   <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
