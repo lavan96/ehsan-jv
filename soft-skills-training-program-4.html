@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ehsan Jaya Ventures - Soft Skills Training</title>
+  <title>Ehsan Jaya Ventures - Soft Skills Training --- Critical Thinking & Implementation</title>
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@400;500&display=swap"
@@ -166,7 +166,7 @@
     /* Hero Section */
     .hero-section {
       position: relative;
-      background: url("soft-skills-hero.jpg") no-repeat center center;
+      background: url("presentation-skills-card.png") no-repeat top center;
       background-size: cover;
       min-height: 100vh;
       display: flex;
@@ -324,6 +324,12 @@
     #collapseMobileApps {
       background-color: rgba(125,0,0,0);
     }
+    #headingGroup .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseGroup {
+      background-color: rgba(125,0,0,0);
+    }
 
     .accordion-button:not(.collapsed) {
   color: #fff !important;
@@ -386,6 +392,22 @@ ul.checklist li::before {
       padding-bottom: 20px;
     }
 
+    .btn-primary{
+      color: #0C1E38;
+      border-color: #0C1E38;
+      background-color: white;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+      padding: 10px 20px;
+    }
+
+    .btn-primary:hover{
+      color: white;
+      border-color: #0C1E38;
+      background-color: #0C1E38;
+    }
+
 
     @media screen and (max-width: 768px){
 
@@ -394,6 +416,35 @@ ul.checklist li::before {
         padding-top: 1em;
         color: #fff;
       }
+
+      #headingCampusManagement .accordion-button {
+      background-color: #0C1E38;
+      min-height: 4em;
+    }
+
+    #headingPortals .accordion-button {
+      background-color: #0C1E38;
+      min-height: 4em;
+    }
+
+    #headingHRMS .accordion-button {
+      background-color: #0C1E38;
+      min-height: 4em;
+    }
+
+      .hero-section {
+      position: relative;
+      background: url("presentation-skills-card.png") no-repeat top center;
+      background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      color: white;
+      z-index: 2;
+    }
 
       h3.card-title {
       text-align: center;
@@ -518,6 +569,21 @@ ul.checklist li::before {
   margin-left: 0.5em;
   margin-right: 0.5em;
 }
+
+.card{
+    min-height: 12em;
+}
+
+.btn-primary{
+      color: #0C1E38;
+      border-color: #0C1E38;
+      background-color: white;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+      padding: 10px 20px;
+      margin-left: 1em;
+    }
     }
 
     @media screen and (min-width: 769px){
@@ -584,7 +650,7 @@ display: none;
 }
 
 .card{
-    min-height: 33em;
+    min-height: 12em;
 }
 }
 
@@ -686,12 +752,12 @@ display: none;
       </svg>
 
     <div class="hero-content web">
-      <h1 style="text-shadow: #fff;">Soft Skills</h1>
-      <p class="lead" style="font-weight: 700;">Training Programs</p>
+      <h1 style="text-shadow: #fff; padding-top: 2em;">Critical Thinking & Implementation</h1>
+      <p class="lead" style="font-weight: 700;">SOFT SKILLS</p>
     </div>
-    <div class="hero-content mobile" style="margin-top: 5em; margin-left: 7em;">
-      <h1 style="text-shadow: #fff;">Soft Skills</h1>
-      <p class="lead" style="font-weight: 700;">Training Programs</p>
+    <div class="hero-content mobile" style="margin-top: 7em; margin-left: 0em;">
+      <h1 style="text-shadow: #fff; font-size: 1.7em;">Critical Thinking & Implementation</h1>
+      <p class="lead" style="font-weight: 700;">SOFT SKILLS</p>
     </div>
     <div class="scroll-down">
       <i class="fa-solid fa-chevron-down"></i>
@@ -699,93 +765,157 @@ display: none;
   </header>
 
   <!-- Cards Section -->
-  <section class="section-cards container">
-    <!-- <h2 class="text-center mb-5 section-title" style="font-weight: 400;">Our Programs</h2> -->
-    <div class="row">
-      <!-- Card 1: AI & Digital -->
-      <div class="col-md-4 mb-4">
-        <a href="soft-skills-training-program-1.html"><div class="card">
-          <img src="effective-communication-card.png">
-          <h3 class="card-title web" style="text-align: left;">Effective Communication & Interpersonal Skills</h3>
-          <h3 class="card-title mobile" style="text-align: left;">Effective Communication & Interpersonal Skills</h3> 
-          <p class="card-text" style="text-align: left;">Enhance your interpersonal skills with a focus on clear communication and empathy. Learn techniques to actively listen, build rapport, and manage emotions effectively to foster better workplace relationships.</p>
-        </div></a> 
-      </div>
-      <!-- Card 2: Agile -->
-      <div class="col-md-4 mb-4">
-        <a href="soft-skills-training-program-2.html"><div class="card">
-          <img src="negotiation-card.png">
-          <h3 class="card-title web" style="text-align: left;">The Psychology in Negotiation</h3>
-          <h3 class="card-title mobile" style="text-align: left;">The Psychology in Negotiation</h3>
-          <p class="card-text" style="text-align: left;">Master negotiation by understanding its psychological dynamics. This course equips you with strategies for win–win outcomes through insights into first impressions, effective communication, and personal energy, using interactive lectures, workshops, and role-plays.</p>
-        </div></a>
-      </div>
-      <!-- Card 3: Microsoft -->
-      <div class="col-md-4 mb-4">
-        <a href="soft-skills-training-program-3.html"><div class="card">
-          <img src="presentation-skills-card.png">
-          <h3 class="card-title" style="text-align: left;">Presentation & Public Speaking Mastery</h3>
-          <p class="card-text" style="text-align: left;">Build confidence and refine your presentation skills with practical techniques for engaging any audience. Learn to craft compelling narratives, deliver clear messages, and overcome stage fright to become an effective public speaker.</p>
-        </div></a>
-      </div>
+  <section class="section-cards container" style="padding-left: 2em; padding-right: 2em;">
+    <h2 class="mb-5 section-title" style="font-weight: 400; text-align: left;">About Course</h2>
+    <p style="padding-bottom: 2em;">This program challenges you to break away from conventional, vertical thinking and embrace an innovative, lateral mindset essential for today's ever-changing business landscape. Inspired by Alvin Toffler’s notion that the future belongs to those who can learn, unlearn, and re-learn, this course helps participants confront the discomfort of change to unlock higher levels of achievement. Through interactive discussions, practical exercises, and group activities, you will explore various mindsets, master key principles of critical thinking, and understand the psychology of change—empowering you to optimize resources, set clear goals, and drive strategic implementation within your organization.</p>
+    <h2 class="mb-5 section-title" style="font-weight: 400; text-align: left;">Who is it for?</h2>
+    <p style="padding-bottom: 2em;">This training is designed for organizational leaders, managers, and professionals who want to cultivate a culture of innovation by rethinking traditional approaches, embracing change, and applying critical thinking to solve complex business challenges.</p>
+    <h2 class="mb-5 section-title" style="font-weight: 400; text-align: left;">Key Learning Outcomes</h2>
+    <ul class="checklist" style="padding-bottom: 2em;">
+        <li>Analyze traditional versus lateral thinking to identify areas where unlearning can lead to breakthrough innovations.</li>
+        <li>Master the six fundamental principles of critical thinking, including examining the status quo, defining clear objectives, and recognizing connectivities across time.</li>
+        <li>Learn to identify and optimize existing resources by discovering individual and team strengths and weaknesses, and establishing definite success factors.</li>
+        <li>Understand the dynamics of psychological change by exploring the five stages of mind-set alignment—from intense resistance to embracing growth.</li>
+        <li>Develop actionable strategies that integrate collaborative intelligence and focused control coaching to transform obstacles into opportunities for success.</li>
+      </ul>
+
+      <section id="key-features">
+        <h2 class="section-title" style="font-weight: 400;">Modules</h2>
+        <div class="accordion" id="eCOLEAccordion">
+          <!-- eCOLE Education Management -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingEducationManagement">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEducationManagement" aria-expanded="true" aria-controls="collapseEducationManagement">
+                Mind Sets Analyzed
+              </button>
+            </h2>
+            <div id="collapseEducationManagement" class="accordion-collapse collapse" aria-labelledby="headingEducationManagement" data-bs-parent="#eCOLEAccordion">
+              <div class="accordion-body">
+                <ul class="mb-0 checklist" style="padding-left: 0px;">
+                  <li>Conventional / Vertical Thinking</li>
+                  <li>Critical Thinking for Effective Leadership</li>
+                  <li>Business Mind Set – Profit/losses Consciousness</li>
+                  <li>Establishing Clear Goals and Measurement</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- eCOLE Campus Management -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingCampusManagement">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCampusManagement" aria-expanded="false" aria-controls="collapseCampusManagement">
+                The Need for Lateral Thinking Today – The Great Shift
+              </button>
+            </h2>
+            <div id="collapseCampusManagement" class="accordion-collapse collapse" aria-labelledby="headingCampusManagement" data-bs-parent="#eCOLEAccordion">
+              <div class="accordion-body">
+                <ul class="mb-0 checklist" style="padding-left: 0px;">
+                    <li>Seeing the connectivity in everything</li>
+                    <li>Planning with Dynamism in Mind</li>
+                    <li>How not to get ‘Caught off Guard’ – ‘Nothing comes out of nowhere’</li>
+                    <li>Moving from ‘Motivation’ to ‘Focused Control Coaching’</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          
+          <!-- eCOLE Portals -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingPortals">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePortals" aria-expanded="false" aria-controls="collapsePortals">
+                Identifying and Optimizing Existing Resources
+              </button>
+            </h2>
+            <div id="collapsePortals" class="accordion-collapse collapse" aria-labelledby="headingPortals" data-bs-parent="#eCOLEAccordion">
+              <div class="accordion-body">
+                <ul class="mb-0 checklist" style="padding-left: 0px;">
+                  <li>Mastering ‘Definite Success Factors’</li>
+                  <li>Discovering own and each other’s strengths and weaknesses</li>
+                  <li>Identifying Required Competencies to achieve Goals</li>
+                  <li>Empathy increasing exercises – among Internal and External Customers</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- eCOLE Financials -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFinancials">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFinancials" aria-expanded="false" aria-controls="collapseFinancials">
+                The 6 principles of Critical Thinking
+              </button>
+            </h2>
+            <div id="collapseFinancials" class="accordion-collapse collapse" aria-labelledby="headingFinancials" data-bs-parent="#eCOLEAccordion">
+              <div class="accordion-body">
+                <ul class="mb-0 checklist" style="padding-left: 0px;">
+                  <li>Status Quo – an analysis of where we are</li>
+                  <li>Have the end in Mind - Destination</li>
+                  <li>See the Bigger Picture</li>
+                  <li>Identify Connectivities – Past, Present & Future</li>
+                  <li>The Right Team – Collaborative Intelligence</li>
+                  <li>Systemic and Intuitive Thinking</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- eCOLE HRMS & Payroll -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingHRMS">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHRMS" aria-expanded="false" aria-controls="collapseHRMS">
+                Psychology of Change – Mind-set Alignment
+              </button>
+            </h2>
+            <div id="collapseHRMS" class="accordion-collapse collapse" aria-labelledby="headingHRMS" data-bs-parent="#eCOLEAccordion">
+              <div class="accordion-body">
+                <p>The 5 Stages of Psychological Change</p>
+                <ul class="mb-0 checklist" style="padding-left: 0px;">
+                  <li>Intense Resistance</li>
+                  <li>Resistance</li>
+                  <li>Confusion</li>
+                  <li>Reluctant Acceptance</li>
+                  <li>Acceptance</li>
+                  <li>Embrace to Grow</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          
+        </div>
+      </section>
+
+      
+      <div class="row g-4">
+        <div class="col-md-3 col-sm-6">
+      <div class="card" style="max-width: 100%;">
+        <i class="fa-solid fa-stopwatch" style="text-align: left; font-size: 2.5em; padding-top: 0.5em; padding-left: 0.5em;"></i>
+        <h3 class="card-title web" style="text-align: left;">Duration</h3>
+        <h3 class="card-title mobile" style="text-align: left;">Duration</h3> 
+        <p class="card-text" style="text-align: left;">2 days</p>
     </div>
-
-    <div class="row">
-        <!-- Card 1: AI & Digital -->
-        <div class="col-md-4 mb-4">
-          <a href="soft-skills-training-program-4.html"><div class="card">
-            <img src="effective-communication-card.png">
-            <h3 class="card-title web" style="text-align: left;">Critical Thinking & Implementation</h3>
-            <h3 class="card-title mobile" style="text-align: left;">Critical Thinking & Implementation</h3> 
-            <p class="card-text" style="text-align: left;">Adopt a lateral, innovative mindset essential for today's dynamic business landscape. Inspired by Alvin Toffler’s idea of learning, unlearning, and re-learning, this course helps you embrace change and boost achievement through interactive discussions and hands-on exercises.</p>
-          </div></a> 
+</div>
+    <div class="col-md-3 col-sm-6">
+        <div class="card" style="max-width: 100%;">
+            <i class="fa-solid fa-user-tie" style="text-align: left; font-size: 2.5em; padding-top: 0.5em; padding-left: 0.5em;"></i>
+            <h3 class="card-title web" style="text-align: left;">Trainer</h3>
+            <h3 class="card-title mobile" style="text-align: left;">Trainer</h3> 
+            <p class="card-text" style="text-align: left; margin-bottom: -1em;">Mr. Kumar Nagalingam</p>
+            <p class="card-text" style="text-align: left; font-size: 0.85em; font-style: italic;">Senior Trainer & Consultant</p>
         </div>
-        <!-- Card 2: Agile -->
-        <div class="col-md-4 mb-4">
-          <a href="soft-skills-training-program-5.html"><div class="card">
-            <img src="negotiation-card.png">
-            <h3 class="card-title web" style="text-align: left;">The Psychology in Negotiation</h3>
-            <h3 class="card-title mobile" style="text-align: left;">The Psychology in Negotiation</h3>
-            <p class="card-text" style="text-align: left;">Develop essential skills for managing workplace conflicts and negotiating successful outcomes. This course offers strategies for understanding differing perspectives, mediating disputes, and reaching win-win agreements.</p>
-          </div></a>
-        </div>
-        <!-- Card 3: Microsoft -->
-        <div class="col-md-4 mb-4">
-          <a href="soft-skills-training-program-6.html"><div class="card">
-            <img src="presentation-skills-card.png">
-            <h3 class="card-title" style="text-align: left;">Presentation & Public Speaking Mastery</h3>
-            <p class="card-text" style="text-align: left;">Build confidence and refine your presentation skills with practical techniques for engaging any audience. Learn to craft compelling narratives, deliver clear messages, and overcome stage fright to become an effective public speaker.</p>
-          </div></a>
-        </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+        
+    </div>
+    <div class="col-md-3 col-sm-6">
+        
+    </div>
       </div>
-
-      <div class="row">
-        <!-- Card 1: AI & Digital -->
-        <div class="col-md-4 mb-4">
-          <a href="soft-skills-training-program-7.html"><div class="card">
-            <img src="effective-communication-card.png">
-            <h3 class="card-title web" style="text-align: left;">Effective Communication & Interpersonal Skills</h3>
-            <h3 class="card-title mobile" style="text-align: left;">Effective Communication & Interpersonal Skills</h3> 
-            <p class="card-text" style="text-align: left;">Enhance your interpersonal skills with a focus on clear communication and empathy. Learn techniques to actively listen, build rapport, and manage emotions effectively to foster better workplace relationships.</p>
-          </div></a> 
-        </div>
-        <!-- Card 2: Agile -->
-        <div class="col-md-4 mb-4">
-          <a href="soft-skills-training-program-8.html"><div class="card">
-            <img src="negotiation-card.png">
-            <h3 class="card-title web" style="text-align: left;">The Psychology in Negotiation</h3>
-            <h3 class="card-title mobile" style="text-align: left;">The Psychology in Negotiation</h3>
-            <p class="card-text" style="text-align: left;">Develop essential skills for managing workplace conflicts and negotiating successful outcomes. This course offers strategies for understanding differing perspectives, mediating disputes, and reaching win-win agreements.</p>
-          </div></a>
-        </div>
-        <!-- Card 3: Microsoft -->
-        <div class="col-md-4 mb-4">
-          <a href="soft-skills-training-program-9.html"><div class="card">
-            <img src="presentation-skills-card.png">
-            <h3 class="card-title" style="text-align: left;">Presentation & Public Speaking Mastery</h3>
-            <p class="card-text" style="text-align: left;">Build confidence and refine your presentation skills with practical techniques for engaging any audience. Learn to craft compelling narratives, deliver clear messages, and overcome stage fright to become an effective public speaker.</p>
-          </div></a>
-        </div>
+      <div style="text-align: left; margin-top: 2em;"><a href="training-consultancy.html" target="_blank" class="btn btn-primary mt-2">Download Course Brochure</a>
+      </div>
+      <div style="text-align: left;"><a href="training-consultancy.html" target="_blank" class="btn btn-primary mt-2">Book your Slot</a>
       </div>
   </section>
 </div>
