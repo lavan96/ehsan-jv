@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ehsan Jaya Ventures - Cybersecurity Training --- Digital Transformation and Technologies for Boards</title>
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+  <!-- Font Awesome CSS (CDN) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+    integrity="sha512-<YOUR_INTEGRITY_HASH_HERE>"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: rgba(12,30,56);
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      font-weight: 500;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    /* Headers using Poppins */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+    }
+    
+    /* Navbar (consistent with homepage) */
+    .navbar {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      padding: 0.8rem 0;
+    }
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+    }
+    .navbar-brand img {
+      height: 60px;
+      width: auto;
+    }
+    .navbar-light .navbar-nav .nav-link {
+      color: rgba(12,30,56,0.9) !important;
+      margin: 0 0.75rem;
+      transition: color 0.3s;
+    }
+    
+    /* Custom Navbar Toggler Styles */
+    .navbar-toggler {
+      background-color: #0C1E38;
+      border-color: #D9A03F;
+    }
+    .navbar-toggler-icon {
+      color: #D9A03F;
+      font-size: 1em;
+      padding-top: 0.25em;
+    }
+    ul.navbar-nav {
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    
+    /* Page Container */
+    
+    
+    /* Section Titles & Content */
+
+    section{
+      margin-top: 80px;
+      margin-bottom: 80px;
+    }
+
+    #about-intro{
+      margin-top: 180px;
+    }
+    .section-title {
+      font-weight: 700;
+      color: #0C1E38;
+      margin-bottom: 1em;
+      font-size: 2.5em;
+    }
+    .section-content p {
+      font-size: 1em;
+      line-height: 1.6;
+      margin-bottom: 1em;
+    }
+    .section-content h3 {
+      font-weight: 700;
+      color: #0C1E38;
+      margin-top: 1em;
+      margin-bottom: 0.5em;
+    } 
+    
+    /* Footer */
+    footer {
+      background: #0C1E38;
+      color: #fff;
+      padding: 20px 0;
+    }
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    
+
+    .navbar-light .navbar-nav .nav-link:hover {
+      font-weight: 900;
+    }
+
+    /* Cards */
+    .card {
+      border-color: #D9A03F;
+      border-width: 0px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+      
+      text-align: center;
+      background: #cbb97a99; /*linear-gradient(45deg, #D9A03F,#ffe093, #EBC76B, #D9A03F, #ffe093, #D9A03F);*/
+      color: #0C1E38;
+ 
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 30px rgba(0,0,0,0.1);
+    }
+    h3.card-title {
+      color: #0C1E38;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+    .card-body,
+    .card-text,
+    .card li {
+      color: #0C1E38;
+    }
+
+    .custom-icon{
+        width: 40%;
+        align-self: center;
+        margin-top: 1em;
+        margin-bottom: -2em;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      background: url("cybersecurity-training-card-2.jpg") no-repeat top center;
+      background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      color: white;
+      z-index: 2;
+    }
+    /* Static Gradient Overlay */
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /* background: linear-gradient(45deg, rgba(12,30,56,0.6), rgba(12,30,56,0.5)); */
+      z-index: 1;
+      
+      
+    }
+
+    .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Hero Text */
+.hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 90%;
+      animation: fadeInUp 1s ease-out;
+      color: #fff;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .hero-content p {
+      font-size: 1.25rem;
+    }
+    /* Scroll Down Indicator */
+    .scroll-down {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      color: #fff;
+      z-index: 3;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(-10px); }
+    }
+
+    /* Dropdown menu styling */
+  .dropdown-menu {
+    background-color: white;
+    border: none;
+    text-align: right;
+    color: #0C1E38;
+  }
+  .dropdown-item {
+    
+    color: #0C1E38;
+    text-transform: uppercase;
+    font-size: 1em;
+    text-align: right;
+  }
+  .dropdown-item:hover, 
+  .dropdown-item:focus {
+    font-weight: 900;
+    background-color: transparent;
+  }
+
+  /* Optional: Adjust spacing for accordion */
+  .accordion-item {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 0.5em;
+      background-color: #fafafa;
+    }
+    .accordion-header button {
+      font-size: 0.7em;
+      text-align: left;
+      height: 3em;
+      padding-left: 1em;
+      color: white;
+    }
+    .accordion-button {
+      padding: 8px;
+      color: #fff;
+      font-weight: 600;
+    }
+    /* Colors for each section based on original table colors */
+    #headingEducationManagement .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseEducationManagement {
+      background-color: rgba(125,0,0,0);
+    }
+    #headingCampusManagement .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseCampusManagement {
+      background-color: rgba(125,0,0,0);
+    }
+    #headingLearningExchange .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseLearningExchange {
+      background-color: rgba(125,0,0,0);
+    }
+    #headingPortals .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapsePortals {
+      background-color: rgba(125,0,0,0);
+    }
+    #headingFinancials .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseFinancials {
+      background-color: rgba(125,0,0,0);
+    }
+    #headingHRMS .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseHRMS {
+      background-color: rgba(125,0,0,0);
+    }
+    #headingReporting .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseReporting {
+      background-color: rgba(125,0,0,0);
+    }
+    #headingMobileApps .accordion-button {
+      background-color: #0C1E38;
+    }
+    #collapseMobileApps {
+      background-color: rgba(125,0,0,0);
+    }
+
+    .accordion-button:not(.collapsed) {
+  color: #fff !important;
+}
+
+/* For collapsed accordion button, show plus icon */
+.accordion-button::before {
+  background-image: none; /* Remove default icon */
+  content: "\f067"; /* Font Awesome plus icon */
+  font-family: "Font Awesome 6 Free"; /* Make sure this matches your Font Awesome version */
+  font-weight: 900;
+  color: #fff; /* White icon */
+  font-size: 1.25rem;
+  margin-right: 1em;
+}
+
+/* For expanded accordion button, show minus icon */
+.accordion-button:not(.collapsed)::before {
+  content: "\f068"; /* Font Awesome minus icon */
+  color: #fff; /* White icon */
+}
+
+.accordion-button::after {
+    background-image: none;
+}
+
+ul.checklist {
+      list-style: none;
+      padding-left: 0em;
+    }
+    ul.checklist li {
+      position: relative;
+      padding-left: 2em;
+      margin-bottom: 10px;
+      
+    }
+
+ul.checklist li::before {
+      content: "\f058";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #0C1E38;
+    }
+
+    
+    .card-text,
+    .card-title{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .card-title{
+      padding-top: 20px;
+    }
+
+    .card-text{
+      padding-bottom: 20px;
+    }
+
+    .btn-primary{
+      color: #0C1E38;
+      border-color: #0C1E38;
+      background-color: white;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+      padding: 10px 20px;
+    }
+
+    .btn-primary:hover{
+      color: white;
+      border-color: #0C1E38;
+      background-color: #0C1E38;
+    }
+
+
+    @media screen and (max-width: 768px){
+
+        ul.navbar-nav {
+        text-align: left;
+        padding-top: 1em;
+        color: #fff;
+      }
+
+      .hero-section {
+      position: relative;
+      background: url("cybersecurity-training-card-2.jpg") no-repeat top left;
+      background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      color: white;
+      z-index: 2;
+    }
+
+      h3.card-title {
+      text-align: center;
+    }
+    .card-body,
+    .card-text,
+    .card li {
+        text-align: center;
+    }
+
+    .custom-icon{
+        width: 30%;
+        align-self: center;
+        margin-top: 1em;
+        margin-bottom: -2em;
+    }
+
+    .web {
+        display: none;
+    }
+
+    .mobile{
+        display: block;
+    }
+
+    .accordion-header button{
+        font-size: 0.6em;
+    }
+
+    ul.checklist li {
+      font-size: 0.8em;
+      
+    }
+
+    #features2{
+        max-width: 100%;
+        height:auto;
+        padding-top: 3em;
+    }
+
+    #modules2{
+        max-width: 100%;
+        height:auto;
+        padding-top: 3em;
+    }
+    .navbar .dropdown-item {
+    text-align: left;
+    color: white;
+  }
+
+  hr {
+    border-width: 2px;
+    border-color: #fff;
+  }
+
+  #navbarNav {
+    background-color: #0C1E38;
+    margin: -1em;
+    margin-top: 1em;
+    min-height: 90vh;
+  }
+    
+  .dropdown-menu {
+    background-color: #0C1E38;
+    border: none;
+    text-align: right;
+    color: white;
+    padding-left: 1em;
+  }
+  .dropdown-item {
+    
+    color: white;
+    text-transform: uppercase;
+    font-size: 1em;
+    text-align: right;
+  }
+  
+  .navbar-light .navbar-nav .nav-link {
+      color: white !important;
+      padding-left: 1em;
+      transition: color 0.3s;
+    }
+
+    .navbar .dropdown-item:hover {
+        color: #fff;
+  }
+
+  /* 1. Hide the default Bootstrap caret. */
+.nav-link.dropdown-toggle::after {
+  display: none !important;
+}
+
+/* 2. Optionally style your custom icon. */
+.custom-dropdown i {
+  color: inherit;     /* Inherits link color */
+  font-size: 0.9em;   /* Adjust icon size as desired */
+  padding-right: 1em;
+  transition: transform 0.3s;
+}
+
+.custom-dropdown[aria-expanded="true"] i {
+  transform: rotateX(180deg);
+}
+
+.hero-section {
+    text-align: right;
+    padding-top: 23em;
+    min-height: 95vh;
+    
+}
+
+.hero-section h1{
+    font-size: 3em;
+    margin-bottom: none;
+}
+
+.hero-section p{
+    font-size: 1em;
+}
+
+.card{
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.card{
+    min-height: 12em;
+}
+
+.btn-primary{
+      color: #0C1E38;
+      border-color: #0C1E38;
+      background-color: white;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+      padding: 10px 20px;
+      margin-left: 1em;
+    }
+    }
+
+    @media screen and (min-width: 769px){
+
+.web {
+display: block;
+}
+
+.mobile{
+display: none;
+}   
+
+.navbar-light .navbar-nav .nav-link:hover {
+      font-weight: 900;
+    }
+
+.navbar .dropdown:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0; /* Adjust if needed */
+  }
+  
+  /* Optionally, you can add a slight fade-in transition */
+  .dropdown-menu {
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .navbar .dropdown:hover > .dropdown-menu {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .navbar .dropdown-item {
+    text-align: left;
+  }
+
+  #features2{
+        max-width: 30%;
+        height:auto;
+        padding-top: 3em;
+    }
+
+    #modules2{
+        max-width: 40%;
+        height: auto;
+        padding: 1em;
+    }
+
+    .nav-link.dropdown-toggle::after {
+  display: none !important;
+}
+
+/* 2. Optionally style your custom icon. */
+.custom-dropdown i {
+  color: inherit;     /* Inherits link color */
+  font-size: 0.9em;   /* Adjust icon size as desired */
+  padding-left: 0.5em;
+  transition: transform 0.3s;
+}
+
+.row{
+  margin-bottom: 1em;
+}
+
+.card{
+    min-height: 12em;
+}
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="EHSAN JAYA VENTURES - new.png" alt="Ehsan Jaya Ventures Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+          <i class="fa-solid fa-bars"></i>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li><hr>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li><hr>
+          <li class="nav-item dropdown">
+            <a 
+              class="nav-link dropdown-toggle d-flex justify-content-between align-items-center custom-dropdown" 
+              href="#" 
+              id="productsDropdown" 
+              role="button" 
+              data-bs-toggle="dropdown" 
+              aria-expanded="false"
+            >
+              <span>Products</span>
+              <div>
+                <i class="fa-solid fa-angle-down ms-2"></i>
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="productsDropdown" style="text-align: left; margin-left: 0em;">
+              <!-- Nested Dropdown for Education -->
+              <li class="nav-item"><a class="nav-link" href="education-system.html">Education</a></li>
+              <!-- Nested Dropdown for Healthcare -->
+              <li class="nav-item"><a class="nav-link" href="healthcare-system.html">Healthcare</a></li>
+            </ul>
+          </li>
+          
+          
+          
+          <hr>
+          <!-- <li class="nav-item dropdown">
+            <a 
+              class="nav-link dropdown-toggle d-flex justify-content-between align-items-center custom-dropdown" 
+              href="services.html" 
+              id="servicesDropdown" 
+              role="button" 
+              data-bs-toggle="dropdown" 
+              aria-expanded="false"
+            >
+              <span>Training</span>
+               Your icon on the right
+              <div>
+                <i class="fa-solid fa-angle-down ms-2"></i>
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="services.html#portable-bar">Digital Technology</a></li>
+              <li><a class="dropdown-item" href="services.html#bartenders">Commercial</a></li>
+              <li><a class="dropdown-item" href="services.html#cocktails-mocktails">Management</a></li>
+              <li><a class="dropdown-item" href="services.html#glasswares">Holistic Living</a></li>
+              <li><a class="dropdown-item" href="services.html#flavor-blaster">Soft Skills</a></li>
+              <li><a class="dropdown-item" href="services.html#flavor-blaster">OSHA</a></li>
+            </ul>
+          </li><hr> -->
+          <li class="nav-item"><a class="nav-link" href="training-consultancy.html">Training</a></li><hr>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li><hr>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- About Page Content -->
+    
+
+    <!-- Hero Section -->
+  <header class="hero-section">
+    <svg class="hero-overlay mobile" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <!-- Example wave path from left to right -->
+        <path d="M 100,25
+        C 90,60 0,80 -200,100
+        L 100,100
+        Z"
+              fill="rgba(12, 30, 56, 0.5)" />
+      </svg>
+    
+    <svg class="hero-overlay web" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <!-- Example wave path from left to right -->
+        <path d="M0,0 C30,40 70,60 100,0 L100,100 L0,100 Z"
+              fill="rgba(12, 30, 56, 0.5)" />
+      </svg>
+
+    <div class="hero-content web">
+      <h1 style="text-shadow: #fff; padding-top: 2em;">Digital Transformation and Technologies for Boards</h1>
+      <p class="lead" style="font-weight: 700;">CYBERSECURITY</p>
+    </div>
+    <div class="hero-content mobile" style="margin-top: 7em; margin-left: 0em;">
+      <h1 style="text-shadow: #fff; font-size: 1.7em;">Digital Transformation and Technologies for Boards</h1>
+      <p class="lead" style="font-weight: 700;">CYBERSECURITY</p>
+    </div>
+    <div class="scroll-down">
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+  </header>
+
+  <!-- Cards Section -->
+  <section class="section-cards container" style="padding-left: 2em; padding-right: 2em;">
+    <h2 class="mb-5 section-title" style="font-weight: 400; text-align: left;">About Course</h2>
+    <p style="padding-bottom: 2em;">In today’s rapidly evolving business environment, Boards of Directors face immense pressure to stay abreast of transformative digital technologies and the associated risks. Boards must move beyond a passive engagement with digital transformation to actively enable and guide it. This course delves into the technologies that define the Fourth Industrial Revolution (IR 4.0), including Artificial Intelligence (AI), Blockchain, Cloud Computing, Big Data and the Internet of Things (IoT). Participants will explore key use cases, the potential benefits and the risks tied to these innovations. With an in-depth understanding of these technologies, board members will be better equipped to lead their organizations through successful digital transformation.
+</p>
+    <h2 class="mb-5 section-title" style="font-weight: 400; text-align: left;">Who is it for?</h2>
+    <p style="padding-bottom: 2em;">Independent and Non-independent Directors</p>
+    <h2 class="mb-5 section-title" style="font-weight: 400; text-align: left;">Key Learning Outcomes</h2>
+    <ul class="checklist" style="padding-bottom: 2em;">
+        <li>Develop a forward-thinking, digitally savvy strategy that aligns with the Board’s overall governance role.</li>
+        <li>Identify key issues, challenges and concerns surrounding emerging digital technologies.</li>
+        <li>Understand and evaluate the potential impact of Artificial Intelligence (AI) on Board dynamics, decision-making and governance.</li>
+        <li>Cultivate a positive and proactive attitude toward embracing and driving digital change within the organization.</li>
+        <li>Analyze the business environment to identify and prioritize digital strategies that will benefit the company and improve its competitive position.</li>
+      </ul>
+
+      <h2 class="mb-5 section-title" style="font-weight: 400; text-align: left;">Training Agenda</h2>
+    <ul class="checklist" style="padding-bottom: 2em;">
+        <li>Digital Transformation and its Benefits</li>
+        <li>Digital Technologies: Artificial Intelligence (AI), Blockchain, Cloud Computing, Data Analytics, Internet of Things (IoT)</li>
+        <li>Digital Transformation Framework</li>
+        <li>Role of the Board of Directors (BOD) in Digital Transformation</li>
+      </ul>
+
+      
+      <div class="row g-4">
+        <div class="col-md-3 col-sm-6">
+      <div class="card" style="max-width: 100%;">
+        <i class="fa-solid fa-stopwatch" style="text-align: left; font-size: 2.5em; padding-top: 0.5em; padding-left: 0.5em;"></i>
+        <h3 class="card-title web" style="text-align: left;">Duration</h3>
+        <h3 class="card-title mobile" style="text-align: left;">Duration</h3> 
+        <p class="card-text" style="text-align: left;">2 hours</p>
+    </div>
+</div>
+    <div class="col-md-3 col-sm-6">
+        <div class="card" style="max-width: 100%;">
+            <i class="fa-solid fa-user-tie" style="text-align: left; font-size: 2.5em; padding-top: 0.5em; padding-left: 0.5em;"></i>
+            <h3 class="card-title web" style="text-align: left;">Trainer</h3>
+            <h3 class="card-title mobile" style="text-align: left;">Trainer</h3> 
+            <p class="card-text" style="text-align: left; margin-bottom: -1em;">Mr. Lee Han Ther</p>
+            <p class="card-text" style="text-align: left; font-size: 0.85em; font-style: italic;">Lead Trainer at NetAssist</p>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+        
+    </div>
+    <div class="col-md-3 col-sm-6">
+        
+    </div>
+      </div>
+      <div style="text-align: left; margin-top: 2em;"><a href="training-consultancy.html" target="_blank" class="btn btn-primary mt-2">Download Course Brochure</a>
+      </div>
+      <div style="text-align: left;"><a href="training-consultancy.html" target="_blank" class="btn btn-primary mt-2">Book your Slot</a>
+      </div>
+  </section>
+</div>
+
+<!-- Footer -->
+ <footer class="footer p-5 text-center" style="background-color: white; color: #0C1E38;">
+  <div class="container" style="text-align: center; margin-top: 1em;">
+      <div class="row">
+          <div class="col-md-3 footer-section">
+              <img src="EHSAN JAYA VENTURES - new.png" alt="" class="footer-logo" style="max-width: 60%; margin-bottom: 3em;">
+          </div>
+          <div class="col-md-3 footer-section" style="margin-bottom: 3em;">
+              <h3 style="font-weight: 600;">Links</h3>
+              <a href="index.html"><strong>Home</strong></a>
+              <a href="about.html"><strong>About</strong></a>
+              <a href=""><strong>Products</strong></a>
+              <ul style="list-style: none; margin-left: -2em;">
+                <a href="education-system.html"><li>Education</li></a>
+                <a href="healthcare-system.html"><li>Healthcare</li></a>
+              </ul>
+              <a href="training-consultancy.html"><strong>Training</strong></a>
+              <a href="contact.html"><strong>Contact</strong></a>
+              
+          </div>
+
+          
+          <div class="col-md-3 footer-section">
+              <h3 style="font-weight: 600;">Contact</h3>
+              <p style="margin-bottom: 1em;">info@ehsanjv.com</p>
+              <div class="social-icons">
+                  <a href=""><i class="fab fa-instagram"></i></a>
+                  <a href=""><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://wa.me/60166263075"><i class="fab fa-whatsapp"></i></a>
+              </div>
+          </div>
+
+          <div class="col-md-3 footer-section">
+            <img src="hrdcorp-logo-training-provider.avif" alt="" class="footer-logo" style="max-width: 100%; margin-bottom: 0em;" id="hrdc">
+        </div>
+      </div>
+  </div>
+
+<!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Ehsan Jaya Ventures. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
